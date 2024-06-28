@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "settings": {}
+    },
+    "featured-categories": {
+      "type": "featured-categories",
+      "settings": {}
+    }
+  },
+  "order": ["image-banner", "featured-categories"]
+}

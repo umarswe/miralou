@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{ 'header.css' |  asset_url }}">
+
+<header class="header">
+  <div class="header__logo">
+    {% render 'logo' %}
+  </div>
+
+  <ul class="header__links">
+    {% for link in linklists['main-menu'].links %}
+      <li class="header__link">
+        <h6 class="heading-6">{{ link.title }}</h6>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="header__icons">
+    {% render 'search-icon' %}
+    {% render 'liked-icon' %}
+    {% render 'cart-icon' %}
+  </div>
+</header>
