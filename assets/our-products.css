@@ -1,0 +1,41 @@
+.our-products__container {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 100px;
+}
+
+.our-products__title {
+  margin-bottom: 30px;
+}
+
+.our-products__wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.our-products__card {
+  max-width: 270px;
+  text-align: center;
+}
+
+.our-products__brand {
+  margin: 20px 0 10px 0;
+}
+
+.our-products__price {
+  margin: 10px 0;
+}
+
+.our-products__link {
+  margin-bottom: 20px;
+}
+
+.our-products__btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+}

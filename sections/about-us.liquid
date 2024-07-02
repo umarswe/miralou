@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="{{ 'about-us.css' |  asset_url }}">
+
+<div class="about-us__wrapper">
+  <div class="about-us__clip"></div>
+  <div class="about-us__box">
+    <div class="about-us__image">
+      <img src="{{ 'about-us.png' |  asset_url }}" width="570" height="324" alt="">
+    </div>
+
+    <div class="about-us__content">
+      <h4 class="heading-4 red uppercase">{{ section.settings.heading }}</h4>
+      <p class="text-2 gray about-us__text">
+        {{ section.settings.text }}
+      </p>
+    </div>
+  </div>
+
+  <div class="about-us__testimonial">
+    <h2 class="heading-4 white uppercase">{{ section.settings.title }}</h2>
+    <div class="about-us__testimonial-box">
+      <div class="chevron__left">
+        {% render 'chevron' %}
+      </div>
+      <p class="text-2 gray testimonial__text">{{ section.settings.description }}</p>
+      <h5 class="heading-5 red uppercase">-{{ section.settings.author }}</h5>
+      <div class="chevron__right">
+        {% render 'chevron' %}
+      </div>
+    </div>
+  </div>
+
+  <div class="about-us__brands">
+    {% render 'nike' %}
+    {% render 'adidas' %}
+    {% render 'nba' %}
+    {% render 'converse' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Us",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Default Heading"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Default Text"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Default Description"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "Author",
+      "default": "Default Author"
+    }
+  ]
+}
+{% endschema %}

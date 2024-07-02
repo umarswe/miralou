@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="{{ 'our-products.css' | asset_url }}">
+
+<div class="our-products__container">
+  <h1 class="heading-4 black uppercase our-products__title">Our Products</h1>
+
+  <div class="our-products__wrapper">
+    {% for product in section.settings.collection.products %}
+      <div class="our-products__card">
+        <img src="{{ product.featured_image.src | image_url: width: 270 }}" alt="" width="270" height="190">
+        <p class="text-4 gray our-products__brand">Nike</p>
+        <h6 class="heading-6 uppercase">{{ product.title }}</h6>
+        <h6 class="heading-6 red our-products__price">{{ product.price | money }}</h6>
+        <a href="#" class="link-black text-4 our-products__link">View product</a>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="link-gray our-products__btn">Show more</button>
+</div>
+
+{% schema %}
+{
+  "name": "Our Products",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "collection"
+    }
+  ]
+}
+{% endschema %}

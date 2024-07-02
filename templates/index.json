@@ -2,12 +2,62 @@
   "sections": {
     "image-banner": {
       "type": "image-banner",
-      "settings": {}
+      "settings": {
+        "content_image": "shopify://shop_images/image-banner.png",
+        "heading": "choose your shoes with us.",
+        "paragraph": "We will help you to choose the product that without the doubt suits you best. And we mean it",
+        "cta_text": "Read More",
+        "cta_url": "shopify://pages/contact"
+      }
     },
     "featured-categories": {
       "type": "featured-categories",
-      "settings": {}
+      "settings": {
+        "heading": "shop by categories",
+        "paragraph": "Pick a category you need",
+        "collections": ["women", "men", "kids"],
+        "products": []
+      }
+    },
+    "our-products": {
+      "type": "our-products",
+      "settings": {
+        "collection": "frontpage"
+      }
+    },
+    "about-us": {
+      "type": "about-us",
+      "settings": {
+        "heading": "About miralou",
+        "text": "Ut donec suscipit nunc volutpat faucibus. Ut penatibus etiam diam facilisi at nibh nulla auctor lorem. Accumsan vulputate euismod massa sit egestas. Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis.",
+        "title": "what people say about us",
+        "description": "Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.",
+        "author": "Andrew Charlston"
+      }
+    },
+    "latest-news": {
+      "type": "latest-news",
+      "settings": {
+        "blog": "news",
+        "title": "latest news",
+        "text": "Nunc rhoncus auctor risus tempor lacus urna, id laoreet sed. Euismod nisl pellentesque risus cursus fringilla tincidunt volutpat, non."
+      }
+    },
+    "newsseller": {
+      "type": "newsseller",
+      "settings": {
+        "heading": "our newsseller",
+        "text": "Subscribe to get more useful information about us and to get you 15% discount off your next purchase",
+        "button_text": "Subscribe"
+      }
     }
   },
-  "order": ["image-banner", "featured-categories"]
+  "order": [
+    "image-banner",
+    "featured-categories",
+    "our-products",
+    "about-us",
+    "latest-news",
+    "newsseller"
+  ]
 }

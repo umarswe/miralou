@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="{{ "main-blog.css" |  asset_url }}">
+
+<div class="blog__container">
+  <h4 class="heading-4 uppercase">latest news</h4>
+  <p class="text-3 gray blog__text">
+    Nunc rhoncus auctor risus tempor lacus urna, id laoreet sed. Euismod nisl pellentesque risus cursus fringilla
+    tincidunt volutpat, non.
+  </p>
+  <div class="blog__box-wrapper">
+    {% for article in blog.articles %}
+      <div class="blog__box">
+        <img src="{{ article.image |  image_url: width: 390 }}" width="390" height="304" alt="">
+        <p class="text-5 gray blog__box-date">{{ article.published_at | date: '%M-%d-%y' }}</p>
+        <h6 class="heading-6 red uppercase">{{ article.title }}</h6>
+        <a href="#" class="black-link">Read more &rarr;</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

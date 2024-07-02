@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="{{ "main-blog.css" |  asset_url }}">
+
+<div class="blog__container">
+  <h4 class="heading-4 uppercase">{{ section.settings.title }}</h4>
+  <p class="text-3 gray blog__text">{{ section.settings.text }}</p>
+  <div class="blog__box-wrapper">
+    {% for article in section.settings.blog.articles %}
+      <div class="blog__box">
+        <img src="{{ article.image |  image_url: width: 390 }}" width="390" height="304" alt="">
+        <p class="text-5 gray blog__box-date">{{ article.published_at | date: '%M-%d-%y' }}</p>
+        <h6 class="heading-6 red uppercase">{{ article.title }}</h6>
+        <a href="#" class="black-link">Read more &rarr;</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="blog__social">
+    <img src="{{ 'instagram.png' |  asset_url }}" width="1170px" height="239" alt="">
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Blogs",
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Default Text"
+    }
+  ]
+}
+{% endschema %}

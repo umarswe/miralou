@@ -3,14 +3,50 @@
 <div class="image-banner">
   <div class="image-banner__content">
     <div class="image-banner__info">
-      <h2 class="heading-2 white uppercase">choose your shoes with us.</h2>
+      <h2 class="heading-2 white uppercase">{{ section.settings.heading }}</h2>
       <p class="text-2 secondary-white image-banner__text">
-        We will help you to choose the product that without the doubt suits you best. And we mean it
+        {{ section.settings.paragraph }}
       </p>
-      <button class="button-gray">Read More</button>
+      <a class="link-gray" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
     </div>
     <div class="image-banner__img">
-      <img src="{{ 'image-banner.png' |  asset_url }}" width="570" height="617" alt="">
+      <img src="{{ section.settings.content_image | image_url: width: 570 }}" width="570" height="617" alt="">
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Image Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "content_image",
+      "label": "Content Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Default Heading"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "Default Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "CTA Text"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL"
+    }
+  ]
+}
+{% endschema %}
