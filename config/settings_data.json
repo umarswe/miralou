@@ -1,5 +1,58 @@
 {
   "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "media_exYzHD": {
+            "type": "media",
+            "settings": {
+              "social_url": "https:\/\/facebook.com",
+              "social_icon": "shopify:\/\/shop_images\/Group_53.png"
+            }
+          },
+          "media_cyCNB6": {
+            "type": "media",
+            "settings": {
+              "social_url": "https:\/\/vkontakte.com",
+              "social_icon": "shopify:\/\/shop_images\/Group_54.png"
+            }
+          },
+          "media_zq6a3K": {
+            "type": "media",
+            "settings": {
+              "social_url": "https:\/\/instagram.com",
+              "social_icon": "shopify:\/\/shop_images\/Group_55.png"
+            }
+          },
+          "media_nwGFyj": {
+            "type": "media",
+            "settings": {
+              "social_url": "https:\/\/twitter.com",
+              "social_icon": "shopify:\/\/shop_images\/Group_56.png"
+            }
+          }
+        },
+        "block_order": [
+          "media_exYzHD",
+          "media_cyCNB6",
+          "media_zq6a3K",
+          "media_nwGFyj"
+        ],
+        "settings": {
+          "social_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "logo": "shopify:\/\/shop_images\/logo-white.png"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {

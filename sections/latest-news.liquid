@@ -16,6 +16,11 @@
 
   <div class="blog__social">
     <img src="{{ 'instagram.png' |  asset_url }}" width="1170px" height="239" alt="">
+
+    <div class="blog__social-content">
+      <h6 class="heading-6 uppercase">@{{ section.settings.social_media_text }}</h6>
+      {% render 'instagram' %}
+    </div>
   </div>
 </div>
 
@@ -38,6 +43,12 @@
       "type": "text",
       "id": "text",
       "label": "Text",
+      "default": "Default Text"
+    },
+    {
+      "type": "text",
+      "id": "social_media_text",
+      "label": "Social Media",
       "default": "Default Text"
     }
   ]

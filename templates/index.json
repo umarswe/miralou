@@ -3,11 +3,11 @@
     "image-banner": {
       "type": "image-banner",
       "settings": {
-        "content_image": "shopify://shop_images/image-banner.png",
+        "content_image": "shopify:\/\/shop_images\/image-banner.png",
         "heading": "choose your shoes with us.",
         "paragraph": "We will help you to choose the product that without the doubt suits you best. And we mean it",
         "cta_text": "Read More",
-        "cta_url": "shopify://pages/contact"
+        "cta_url": "shopify:\/\/pages\/contact"
       }
     },
     "featured-categories": {
@@ -15,8 +15,14 @@
       "settings": {
         "heading": "shop by categories",
         "paragraph": "Pick a category you need",
-        "collections": ["women", "men", "kids"],
-        "products": []
+        "collections": [
+          "women",
+          "men",
+          "kids"
+        ],
+        "products": [
+
+        ]
       }
     },
     "our-products": {
@@ -27,6 +33,42 @@
     },
     "about-us": {
       "type": "about-us",
+      "blocks": {
+        "brand_hRyaFA": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "https:\/\/nike.com",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_1.png"
+          }
+        },
+        "brand_TpLc9V": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "https:\/\/adidas.com",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_2.png"
+          }
+        },
+        "testimonials_CA3kU6": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
+            "testimonial_author": "-Andrew Charlston"
+          }
+        },
+        "testimonials_YGaA7K": {
+          "type": "testimonials",
+          "settings": {
+            "testimonial_text": "“22222 Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
+            "testimonial_author": "-Andrew Charlston 2"
+          }
+        }
+      },
+      "block_order": [
+        "brand_hRyaFA",
+        "brand_TpLc9V",
+        "testimonials_CA3kU6",
+        "testimonials_YGaA7K"
+      ],
       "settings": {
         "heading": "About miralou",
         "text": "Ut donec suscipit nunc volutpat faucibus. Ut penatibus etiam diam facilisi at nibh nulla auctor lorem. Accumsan vulputate euismod massa sit egestas. Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis.",
@@ -40,7 +82,8 @@
       "settings": {
         "blog": "news",
         "title": "latest news",
-        "text": "Nunc rhoncus auctor risus tempor lacus urna, id laoreet sed. Euismod nisl pellentesque risus cursus fringilla tincidunt volutpat, non."
+        "text": "Nunc rhoncus auctor risus tempor lacus urna, id laoreet sed. Euismod nisl pellentesque risus cursus fringilla tincidunt volutpat, non.",
+        "social_media_text": "miralou"
       }
     },
     "newsseller": {

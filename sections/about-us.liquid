@@ -30,10 +30,13 @@
   </div>
 
   <div class="about-us__brands">
-    {% render 'nike' %}
-    {% render 'adidas' %}
-    {% render 'nba' %}
-    {% render 'converse' %}
+    {% for block in section.blocks %}
+      {% if block.type == 'brand' %}
+        <a href="{{ block.settings.brand_url }}">
+          <img src="{{ block.settings.brand_logo |  image_url: width: 170  }}" alt="" width="170" height="84">
+        </a>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 
@@ -70,6 +73,40 @@
       "id": "author",
       "label": "Author",
       "default": "Default Author"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "url",
+          "id": "brand_url",
+          "label": "URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "brand_logo",
+          "label": "Brand Logo"
+        }
+      ]
+    },
+    {
+      "type": "testimonials",
+      "name": "Testimonials",
+      "settings": [
+        {
+          "type": "text",
+          "id": "testimonial_text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "testimonial_author",
+          "label": "Author"
+        }
+      ]
     }
   ]
 }
