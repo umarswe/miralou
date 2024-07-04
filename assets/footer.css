@@ -1,5 +1,5 @@
 .footer__container {
-  background-color: #252525;
+  background-color: var(--color-secondary-black);
   padding: 65px 0 15px 0;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .footer__copyright {
-  border-top: 1px solid #ef3636;
+  border-top: 1px solid var(--color-red);
   padding-top: 17px;
 
   display: flex;

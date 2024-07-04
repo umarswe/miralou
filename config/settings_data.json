@@ -36,13 +36,37 @@
               "social_url": "https:\/\/twitter.com",
               "social_icon": "shopify:\/\/shop_images\/Group_56.png"
             }
+          },
+          "contact_G7hHpF": {
+            "type": "contact",
+            "settings": {
+              "contact_url": "https:\/\/google.com",
+              "contact_icon": "shopify:\/\/shop_images\/ep_location.png"
+            }
+          },
+          "contact_fKt999": {
+            "type": "contact",
+            "settings": {
+              "contact_url": "https:\/\/google.com",
+              "contact_icon": "shopify:\/\/shop_images\/cil_phone.png"
+            }
+          },
+          "contact_7699A9": {
+            "type": "contact",
+            "settings": {
+              "contact_url": "https:\/\/google.com",
+              "contact_icon": "shopify:\/\/shop_images\/fontisto_email.png"
+            }
           }
         },
         "block_order": [
           "media_exYzHD",
           "media_cyCNB6",
           "media_zq6a3K",
-          "media_nwGFyj"
+          "media_nwGFyj",
+          "contact_G7hHpF",
+          "contact_fKt999",
+          "contact_7699A9"
         ],
         "settings": {
           "social_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

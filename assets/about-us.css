@@ -19,7 +19,7 @@
 
 .about-us__content {
   padding: 60px 30px;
-  background-color: #f6f6f6;
+  background-color: var(--color-secondary-white);
 }
 
 .about-us__text {
@@ -47,7 +47,7 @@
 
 .about-us__testimonial-box {
   position: relative;
-  background-color: #f6f6f6;
+  background-color: var(--color-secondary-white);
   padding: 30px 100px;
   margin: 40px 0;
 }
