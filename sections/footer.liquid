@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="footer__information">
-        <h6 class="heading-6 red uppercase">Information</h6>
+        <h6 class="heading-6 red uppercase">{{ section.settings.nav_info }}</h6>
 
         <ul class="footer__information-list">
           {% for link in linklists.footer.links %}
@@ -31,7 +31,7 @@
         </ul>
       </div>
       <div class="footer__links">
-        <h6 class="heading-6 red uppercase">Quick Links</h6>
+        <h6 class="heading-6 red uppercase">{{ section.settings.nav_links }}</h6>
 
         <ul class="footer__links-list">
           {% for link in linklists['footer-quick-links'].links %}
@@ -44,24 +44,12 @@
         </ul>
       </div>
       <div class="footer__contact">
-        <h6 class="heading-6 red uppercase">contact us</h6>
+        <h6 class="heading-6 red uppercase">{{ section.settings.nav_contact }}</h6>
 
         <ul class="footer__contact-list">
           {% for link in linklists['footer-contact'].links %}
             <li class="footer__contact-item">
               <a href="{{ link.url }}" class="footer__contact-link">
-                {% for block in section.block %}
-                  {% if block.type == 'contact' %}
-                    <a href="{{ block.settings.contact_url }}">
-                      <img
-                        src="{{ block.settings.contact_icon |  image_url: width: 20  }}"
-                        width="20"
-                        height="21"
-                        alt=""
-                      >
-                    </a>
-                  {% endif %}
-                {% endfor %}
                 <p class="text-4 white">{{ link.title }}</p>
               </a>
             </li>
@@ -70,8 +58,8 @@
       </div>
     </div>
     <div class="footer__copyright">
-      <h6 class="heading-6 white uppercase">Copyright © 2022 Miralou</h6>
-      <h6 class="heading-6 white uppercase">All right reserved</h6>
+      <h6 class="heading-6 white uppercase">{{ section.settings.copyright }}</h6>
+      <h6 class="heading-6 white uppercase">{{ section.settings.rights }}</h6>
     </div>
   </div>
 </div>
@@ -90,6 +78,36 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "nav_info",
+      "label": "Footer Nav Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "nav_links",
+      "label": "Footer Nav Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "nav_contact",
+      "label": "Footer Nav Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Copyright",
+      "default": "Default Text"
+    },
+    {
+      "type": "text",
+      "id": "rights",
+      "label": "Rights",
+      "default": "Default Text"
     }
   ],
   "blocks": [
@@ -106,22 +124,6 @@
           "type": "image_picker",
           "id": "social_icon",
           "label": "Social Media Icon"
-        }
-      ]
-    },
-    {
-      "type": "contact",
-      "name": "Contact",
-      "settings": [
-        {
-          "type": "url",
-          "id": "contact_url",
-          "label": "URL"
-        },
-        {
-          "type": "image_picker",
-          "id": "contact_icon",
-          "label": "Contact Icon"
         }
       ]
     },

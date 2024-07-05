@@ -2,7 +2,7 @@
 
 <header class="header">
   <div class="header__logo">
-    {% render 'logo' %}
+    <img src="{{ section.settings.logo |  image_url: width: 106}}" width="106" height="24" alt="">
   </div>
 
   <ul class="header__links">
@@ -16,8 +16,48 @@
   </ul>
 
   <div class="header__icons">
-    {% render 'search-icon' %}
-    {% render 'liked-icon' %}
-    {% render 'cart-icon' %}
+    {% for block in section.blocks %}
+      {% if block.type == 'navigation' %}
+        <a href="{{ block.settings.nav_url }}">
+          <img src="{{ block.settings.nav_icon |  image_url: width: 24 }}" width="24" height="24" alt="">
+        </a>
+      {% endif %}
+    {% endfor %}
+    {% comment %}
+      {% render 'search-icon' %}
+      {% render 'liked-icon' %}
+      {% render 'cart-icon' %}
+    {% endcomment %}
   </div>
 </header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "navigation",
+      "name": "Navigation",
+      "settings": [
+        {
+          "type": "url",
+          "id": "nav_url",
+          "label": "URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "nav_icon",
+          "label": "Navigation Icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

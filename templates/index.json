@@ -1,18 +1,18 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image-banner": {
       "type": "image-banner",
       "settings": {
-        "content_image": "shopify:\/\/shop_images\/image-banner.png",
+        "content_image": "shopify://shop_images/image-banner.png",
         "heading": "Default Heading",
         "paragraph": "Default Paragraph",
         "cta_text": "CTA Text",
@@ -24,12 +24,8 @@
       "settings": {
         "heading": "Default Heading",
         "paragraph": "Default Paragraph",
-        "collections": [
-
-        ],
-        "products": [
-
-        ]
+        "collections": [],
+        "products": []
       }
     },
     "our-products": {
@@ -40,6 +36,42 @@
     },
     "about-us": {
       "type": "about-us",
+      "blocks": {
+        "brand_hRyaFA": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "https://nike.com",
+            "brand_logo": "shopify://shop_images/Logo_1.png"
+          }
+        },
+        "brand_TpLc9V": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "https://adidas.com",
+            "brand_logo": "shopify://shop_images/Logo_2.png"
+          }
+        },
+        "brand_7TgX7C": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "",
+            "brand_logo": "shopify://shop_images/Logo_3.png"
+          }
+        },
+        "brand_J8xHzJ": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "",
+            "brand_logo": "shopify://shop_images/logo_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "brand_hRyaFA",
+        "brand_TpLc9V",
+        "brand_7TgX7C",
+        "brand_J8xHzJ"
+      ],
       "settings": {
         "heading": "About miralou",
         "text": "Ut donec suscipit nunc volutpat faucibus. Ut penatibus etiam diam facilisi at nibh nulla auctor lorem. Accumsan vulputate euismod massa sit egestas. Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis.",
