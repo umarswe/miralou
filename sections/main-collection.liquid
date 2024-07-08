@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="{{ 'main-collection.css' |  asset_url }}">
+
+<div class="main-collection">
+  {% paginate collection.products by 4 %}
+    <ul class="main-collection__list">
+      {% for product in collection.products %}
+        <li class="main-collection__item">
+          <div class="main-collection__image">
+            <img src="{{ product.featured_image |  image_url: width: 270 }}" width="270" height="190" alt="">
+          </div>
+          <div class="main-collection__info">
+            <p class="text-4 gray">Nike</p>
+            <a href="{{ product.url }}">
+              <h6 class="heading-6 uppercase main-collection__name">{{ product.title }}</h6>
+            </a>
+            <h6 class="heading-6 red main-collection__price">{{ product.price | money }}</h6>
+            <a class="link-black" href="{{ product.url }}">View product</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% render 'pagination', paginate: paginate %}
+  {% endpaginate %}
+</div>

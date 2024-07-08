@@ -1,9 +1,21 @@
 {
   "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/collection-header.png",
+        "text": "Home\/Shop",
+        "title": "Shop"
+      }
+    },
     "main": {
-      "type": "main-page",
-      "settings": {}
+      "type": "main-collection",
+      "settings": {
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "collection-header",
+    "main"
+  ]
 }

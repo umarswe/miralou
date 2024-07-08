@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="{{ 'collection-header.css' | asset_url }}">
+
+<div class="collection-header">
+  <div class="collection-header__image">
+    <img src="{{ section.settings.image |  image_url: width: 1920  }}" alt="" width="1920" height="230" `>
+  </div>
+
+  <div class="collection-header__content">
+    <p class="text-5 white collection-header__text">Home / Shop</p>
+    <h2 class="heading-2 white uppercase">shop</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Collection Header Image"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    }
+  ]
+}
+{% endschema %}

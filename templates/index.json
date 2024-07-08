@@ -13,18 +13,18 @@
       "type": "image-banner",
       "settings": {
         "content_image": "shopify://shop_images/image-banner.png",
-        "heading": "Default Heading",
-        "paragraph": "Default Paragraph",
-        "cta_text": "CTA Text",
-        "cta_url": ""
+        "heading": "choose your shoes with us.",
+        "paragraph": "We will help you to choose the product that without the doubt suits you best. And we mean it",
+        "cta_text": "Read More",
+        "cta_url": "shopify://pages/contact"
       }
     },
     "featured-categories": {
       "type": "featured-categories",
       "settings": {
-        "heading": "Default Heading",
-        "paragraph": "Default Paragraph",
-        "collections": [],
+        "heading": "shop by categories",
+        "paragraph": "Pick a category you need",
+        "collections": ["women", "men", "kids"],
         "products": []
       }
     },

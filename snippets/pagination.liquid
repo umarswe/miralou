@@ -1,0 +1,25 @@
+<div class="pagination">
+  {% if paginate.pages > 1 %}
+    <a
+      href="{{ paginate.previous.url }}"
+      class="{% unless paginate.previous.is_link %} disabled {% endunless %}"
+    >
+      {% render 'paginate-previous' %}
+    </a>
+
+    <div class="pagination__numbers">
+      {% for page in paginate.parts %}
+        <a href="{{ page.url }}" class="pagination__number">
+          {{ page.title }}
+        </a>
+      {% endfor %}
+    </div>
+
+    <a
+      href="{{ paginate.next.url }}"
+      class="{% unless paginate.next.is_link %} disabled {% endunless %}"
+    >
+      {% render 'paginate-next' %}
+    </a>
+  {% endif %}
+</div>
