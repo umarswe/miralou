@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ 'main-collection.css' |  asset_url }}">
 
 <div class="main-collection">
-  {% paginate collection.products by 4 %}
+  {% paginate collection.products by 8 %}
     <ul class="main-collection__list">
       {% for product in collection.products %}
         <li class="main-collection__item">

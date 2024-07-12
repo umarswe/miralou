@@ -1,0 +1,28 @@
+.page-404__container {
+  background-color: var(--color-secondary-white);
+}
+
+.page-404 {
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  text-align: center;
+}
+
+.page-404__title {
+  margin-bottom: 20px;
+}
+
+.page-404__input {
+  width: 100%;
+  padding: 11px 30px;
+  margin: 25px 0 15px 0;
+  border-radius: 6px;
+  border: 1px solid var(--color-red);
+
+  outline: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}

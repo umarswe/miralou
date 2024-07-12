@@ -1,3 +1,56 @@
-<h2>{{ product.title }}</h2>
-<h2>{{ product.price }}</h2>
-<h2>{{ product.description }}</h2>
+<link rel="stylesheet" href="{{ 'main-product.css' |  asset_url }}">
+
+<div class="main-product">
+  <div class="product__container">
+    <div class="product__image">
+      <img src="{{ product.featured_image | image_url: width: 270 }}" width="270" height="230" alt="">
+      <img
+        class="product__image-right"
+        src="{{ product.featured_image | image_url: width: 270 }}"
+        width="270"
+        height="230"
+        alt=""
+      >
+    </div>
+
+    <div class="product__content">
+      <p class="text-5 gray">For Men / Jordan / Delta 3 SP</p>
+      <h5 class="heading-5 product__content-title">{{ product.title }}</h5>
+      <h5 class="heading-5 red">{{ product.price | money }}</h5>
+
+      <ul class="product__sizes">
+        {% for variant in product.variants %}
+          {% if variant.available %}
+            <li class="product__size">
+              <p class="text-4">{{ variant.option1 }}</p>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <div class="product__content-actions">
+        <button class="button__cart white">Add to cart</button>
+        <button class="button__wishlist">Add to wishlist</button>
+      </div>
+
+      <div class="product__description">
+        <div class="product__description-title">
+          <p class="text-4">Description</p>
+          {% render 'open' %}
+        </div>
+
+        <div class="product__description-text">
+          {{ product.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="other__products">
+    <h4 class="heading-4 uppercase">Other products</h4>
+
+    {% for product in recommendations.products %}
+      <h2>{{ product.title }}</h2>
+    {% endfor %}
+  </div>
+</div>

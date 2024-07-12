@@ -18,16 +18,24 @@
   <div class="header__icons">
     {% for block in section.blocks %}
       {% if block.type == 'navigation' %}
-        <a href="{{ block.settings.nav_url }}">
-          <img src="{{ block.settings.nav_icon |  image_url: width: 24 }}" width="24" height="24" alt="">
-        </a>
+        {% assign icon_type = block.settings.nav_icon %}
+        {% assign icon_image = block.settings.nav_icon_image %}
+
+        {% if icon_type == 'search' %}
+          <a href="/search">
+            <img src="{{ icon_image | image_url: width: 24 }}" width="24" height="24" alt="Search">
+          </a>
+        {% elsif icon_type == 'wishlist' %}
+          <a href="/pages/wishlist">
+            <img src="{{ icon_image | image_url: width: 24 }}" width="24" height="24" alt="Wishlist">
+          </a>
+        {% elsif icon_type == 'cart' %}
+          <a href="{{ routes.cart_url }}">
+            <img src="{{ icon_image | image_url: width: 24 }}" width="24" height="24" alt="Cart">
+          </a>
+        {% endif %}
       {% endif %}
     {% endfor %}
-    {% comment %}
-      {% render 'search-icon' %}
-      {% render 'liked-icon' %}
-      {% render 'cart-icon' %}
-    {% endcomment %}
   </div>
 </header>
 
@@ -47,16 +55,36 @@
       "name": "Navigation",
       "settings": [
         {
-          "type": "url",
-          "id": "nav_url",
-          "label": "URL"
+          "type": "select",
+          "id": "nav_icon",
+          "label": "Navigation Icon",
+          "options": [
+            {
+              "value": "search",
+              "label": "Search"
+            },
+            {
+              "value": "wishlist",
+              "label": "Wishlist"
+            },
+            {
+              "value": "cart",
+              "label": "Cart"
+            }
+          ]
         },
         {
           "type": "image_picker",
-          "id": "nav_icon",
-          "label": "Navigation Icon"
+          "id": "nav_icon_image",
+          "label": "Navigation Icon Image"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header",
+      "category": "Header"
     }
   ]
 }

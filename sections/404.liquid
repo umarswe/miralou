@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="{{ '404.css' |  asset_url }}">
+
+<div class="page-404__container">
+  <div class="page-404">
+    <div class="page-404__title">
+      <h1 class="heading-1 red">{{ section.settings.header1 }}</h1>
+      <h1 class="heading-1 red uppercase">{{ section.settings.header2 }}</h1>
+    </div>
+
+    <p class="text-2 gray">{{ section.settings.text }}</p>
+
+    <input class="page-404__input" type="text" placeholder="Search what you were interested in">
+
+    <p class="text-5 gray">Go back to <a href="#" class="red">blog</a> or <a href="#" class="red">home</a></p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "404",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header1",
+      "label": "Header",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "header2",
+      "label": "Header",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Default Text"
+    }
+  ]
+}
+{% endschema %}

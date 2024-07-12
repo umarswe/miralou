@@ -1,9 +1,13 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {}
+    "404": {
+      "type": "404",
+      "settings": {
+        "header1": "404",
+        "header2": "page not found",
+        "text": "We haven't found this page, there is something wrong with your internet connection."
+      }
     }
   },
-  "order": ["main"]
+  "order": ["404"]
 }

@@ -10,8 +10,23 @@
         <div class="footer__social-icons">
           {% for block in section.blocks %}
             {% if block.type == 'media' %}
-              <a href="{{ block.settings.social_url }}">
-                <img src="{{ block.settings.social_icon |  image_url: width: 24  }}" width="24" height="24" alt="">
+              <a class="footer__social-link" href="{{ block.settings.social_url }}">
+                {% if block.settings.social_url contains 'facebook.com' %}
+                  <img
+                    class="facebook-icon"
+                    src="{{ block.settings.social_icon | image_url: width: 14 }}"
+                    width="14"
+                    height="24"
+                    alt=""
+                  >
+                {% else %}
+                  <img
+                    src="{{ block.settings.social_icon | image_url: width: 24 }}"
+                    width="24"
+                    height="24"
+                    alt=""
+                  >
+                {% endif %}
               </a>
             {% endif %}
           {% endfor %}

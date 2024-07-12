@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="{{ 'cart.css' |  asset_url }}">
+
+<div class="cart__wrapper">
+  <div class="cart__header">
+    <div class="cart__header-bg">
+      <img
+        class="cart__header-image"
+        src="{{ section.settings.cart_image |  image_url: width: 1220 }}"
+        width="1920"
+        height="230"
+        alt=""
+      >
+    </div>
+
+    <div class="cart__header-content">
+      <p class="text-5 white cart__header-text">Home / Shopping cart</p>
+      <h2 class="heading-2 white">shopping Cart</h2>
+    </div>
+  </div>
+  <div class="cart__content">
+    <div class="cart__content-wrapper">
+      <h2 class="heading-2 red uppercase">Your Shopping cart is empty</h2>
+      <p class="text-2 white cart__content-text">
+        To see which products are in cart, go to shop and click on “Add to cart” button. For now there is no products
+        added into the cart.
+      </p>
+    </div>
+  </div>
+  <div class="cart__action">
+    <a href="{{ routes.all_products_collection_url }}" class="link-gray">
+      <p class="text-4">Go to shop</p>
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cart_image",
+      "label": "Background Image"
+    }
+  ]
+}
+{% endschema %}

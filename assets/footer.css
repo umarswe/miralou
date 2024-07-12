@@ -22,9 +22,19 @@
   margin: 27px 0 36px 0;
 }
 
+.footer__social-link {
+  width: 24px;
+  height: 24px;
+}
+
 .footer__social-icons {
   display: flex;
   gap: 15px;
+}
+
+.footer__social-link:nth-child(1) {
+  width: 14px;
+  height: 24px;
 }
 
 .footer__information-list,

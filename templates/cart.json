@@ -1,9 +1,13 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {}
+    "cart": {
+      "type": "cart",
+      "settings": {
+        "cart_image": "shopify:\/\/shop_images\/cart-bg_5dd447d5-cb93-435f-a863-35ef0bf86000.png"
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "cart"
+  ]
 }

@@ -1,44 +1,35 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "current": {
     "sections": {
       "header": {
         "type": "header",
         "blocks": {
-          "navigation_axgFFR": {
+          "navigation_D8KUYH": {
             "type": "navigation",
             "settings": {
-              "nav_url": "#",
-              "nav_icon": "shopify:\/\/shop_images\/search.png"
+              "nav_icon": "search",
+              "nav_icon_image": "shopify:\/\/shop_images\/search.png"
             }
           },
-          "navigation_KUb4Hq": {
+          "navigation_edjMN9": {
             "type": "navigation",
             "settings": {
-              "nav_url": "#",
-              "nav_icon": "shopify:\/\/shop_images\/heart.png"
+              "nav_icon": "wishlist",
+              "nav_icon_image": "shopify:\/\/shop_images\/heart.png"
             }
           },
-          "navigation_A8L7pj": {
+          "navigation_tafdpT": {
             "type": "navigation",
             "settings": {
-              "nav_url": "#",
-              "nav_icon": "shopify:\/\/shop_images\/shopping-cart.png"
+              "nav_icon": "cart",
+              "nav_icon_image": "shopify:\/\/shop_images\/shopping-cart.png"
             }
           }
         },
         "block_order": [
-          "navigation_axgFFR",
-          "navigation_KUb4Hq",
-          "navigation_A8L7pj"
+          "navigation_D8KUYH",
+          "navigation_edjMN9",
+          "navigation_tafdpT"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/Miralou.png"
@@ -50,7 +41,7 @@
           "media_7iTyeK": {
             "type": "media",
             "settings": {
-              "social_url": "",
+              "social_url": "https:\/\/facebook.com",
               "social_icon": "shopify:\/\/shop_images\/Group_53.png"
             }
           },
