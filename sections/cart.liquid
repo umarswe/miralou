@@ -1,37 +1,92 @@
 <link rel="stylesheet" href="{{ 'cart.css' |  asset_url }}">
 
-<div class="cart__wrapper">
-  <div class="cart__header">
-    <div class="cart__header-bg">
-      <img
-        class="cart__header-image"
-        src="{{ section.settings.cart_image |  image_url: width: 1220 }}"
-        width="1920"
-        height="230"
-        alt=""
-      >
-    </div>
+<div class="cart__header">
+  <div class="cart__header-bg">
+    <img
+      class="cart__header-image"
+      src="{{ section.settings.cart_image |  image_url: width: 1920 }}"
+      width="1920"
+      height="230"
+      alt=""
+    >
+  </div>
 
-    <div class="cart__header-content">
-      <p class="text-5 white cart__header-text">Home / Shopping cart</p>
-      <h2 class="heading-2 white">shopping Cart</h2>
-    </div>
-  </div>
-  <div class="cart__content">
-    <div class="cart__content-wrapper">
-      <h2 class="heading-2 red uppercase">Your Shopping cart is empty</h2>
-      <p class="text-2 white cart__content-text">
-        To see which products are in cart, go to shop and click on “Add to cart” button. For now there is no products
-        added into the cart.
-      </p>
-    </div>
-  </div>
-  <div class="cart__action">
-    <a href="{{ routes.all_products_collection_url }}" class="link-gray">
-      <p class="text-4">Go to shop</p>
-    </a>
+  <div class="cart__header-content">
+    <p class="text-5 white cart__header-text">Home / Shopping cart</p>
+    <h2 class="heading-2 white uppercase">shopping Cart</h2>
   </div>
 </div>
+
+{% if cart.item_count > 0 %}
+  <div class="product__list-wrapper">
+    <h3 class="heading-4 uppercase">{{ section.settings.header }}</h3>
+    <form class="product__form" action="{{ routes.cart_url }}" method="POST">
+      <ul class="cart__products">
+        {% for item in cart.items %}
+          <li class="cart__product">
+            <div class="cart__product-info">
+              <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0">
+                <img src="{{ section.settings.cart_remove |  image_url: width: 18 }}" width="18" height="18" alt="">
+              </a>
+              <img src="{{ item.image |  image_url: width: 116 }}" width="116" height="98" alt="">
+              <a href="{{ item.url }}">
+                <h5 class="heading-5 uppercase">{{ item.product.title }}</h5>
+              </a>
+            </div>
+
+            <div class="cart__product-actions">
+              <div class="cart__product-quantity">
+                <button class="product__quantity-btn">
+                  <img
+                    src="{{ section.settings.quantity_right |  image_url: width: 100 }}"
+                    width="5"
+                    height="10"
+                    alt=""
+                  >
+                </button>
+                <span>1</span>
+                <button class="product__quantity-btn">
+                  <img
+                    class="product__quantity-right-icon"
+                    src="{{ section.settings.quantity_left |  image_url: width: 100 }}"
+                    width="5"
+                    height="10"
+                    alt=""
+                  >
+                </button>
+              </div>
+              <h5 class="heading-5 gray">{{ item.line_price | money }}</h5>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="cart__price-wrapper">
+        <div class="cart__price">
+          <h5 class="heading-5 white uppercase">Cart totals</h5>
+          <p class="text-4 secondary-gray">Subtotals: {{ cart.total_price | money }}</p>
+          <h5 class="heading-5">Total: {{ cart.total_price | money }}</h5>
+        </div>
+      </div>
+    </form>
+  </div>
+{% else %}
+  <div class="cart__wrapper">
+    <div class="cart__content">
+      <div class="cart__content-wrapper">
+        <h2 class="heading-2 red uppercase">Your Shopping cart is empty</h2>
+        <p class="text-2 white cart__content-text">
+          To see which products are in cart, go to shop and click on “Add to cart” button. For now there is no products
+          added into the cart.
+        </p>
+      </div>
+    </div>
+    <div class="cart__action">
+      <a href="{{ routes.all_products_collection_url }}" class="link-gray">
+        <p class="text-4">Go to shop</p>
+      </a>
+    </div>
+  </div>
+{% endif %}
 
 {% schema %}
 {
@@ -41,6 +96,27 @@
       "type": "image_picker",
       "id": "cart_image",
       "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "cart_remove",
+      "label": "Remove Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "quantity_right",
+      "label": "Quantity Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "quantity_left",
+      "label": "Quantity Icon"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Title",
+      "default": "Default Title"
     }
   ]
 }

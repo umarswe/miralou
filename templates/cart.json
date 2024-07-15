@@ -3,7 +3,11 @@
     "cart": {
       "type": "cart",
       "settings": {
-        "cart_image": "shopify:\/\/shop_images\/cart-bg_5dd447d5-cb93-435f-a863-35ef0bf86000.png"
+        "cart_image": "shopify:\/\/shop_images\/cart-bg_5dd447d5-cb93-435f-a863-35ef0bf86000.png",
+        "cart_remove": "shopify:\/\/shop_images\/remove.png",
+        "quantity_right": "shopify:\/\/shop_images\/Vector-left.png",
+        "quantity_left": "shopify:\/\/shop_images\/Vector-right.png",
+        "header": "product"
       }
     }
   },

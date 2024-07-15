@@ -29,7 +29,10 @@
       </ul>
 
       <div class="product__content-actions">
-        <button class="button__cart white">Add to cart</button>
+        <form action="/cart/add" method="post">
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+          <button type="submit" class="button__cart white">Add to cart</button>
+        </form>
         <button class="button__wishlist">Add to wishlist</button>
       </div>
 
@@ -44,13 +47,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="other__products">
-    <h4 class="heading-4 uppercase">Other products</h4>
-
-    {% for product in recommendations.products %}
-      <h2>{{ product.title }}</h2>
-    {% endfor %}
   </div>
 </div>

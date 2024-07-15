@@ -67,6 +67,7 @@
 }
 
 .button__cart {
+  width: 100%;
   border: none;
   background-color: var(--color-secondary-gray);
 }
