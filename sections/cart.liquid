@@ -12,7 +12,7 @@
   </div>
 
   <div class="cart__header-content">
-    <p class="text-5 white cart__header-text">Home / Shopping cart</p>
+    {% render 'breadcrumb' %}
     <h2 class="heading-2 white uppercase">shopping Cart</h2>
   </div>
 </div>
@@ -44,7 +44,7 @@
                     alt=""
                   >
                 </button>
-                <span>1</span>
+                <span class="product__quantity-number">1</span>
                 <button class="product__quantity-btn">
                   <img
                     class="product__quantity-right-icon"
@@ -62,9 +62,22 @@
       </ul>
       <div class="cart__price-wrapper">
         <div class="cart__price">
-          <h5 class="heading-5 white uppercase">Cart totals</h5>
-          <p class="text-4 secondary-gray">Subtotals: {{ cart.total_price | money }}</p>
-          <h5 class="heading-5">Total: {{ cart.total_price | money }}</h5>
+          <div class="cart__price-info">
+            <h5 class="heading-5 cart__price-title">Cart totals</h5>
+            <p class="text-4 secondary-gray cart__price-subtotal">
+              <span>Subtotals:</span>
+              <span class="heading-6 white" id="cart-subtotal">{{ cart.total_price | money }}</span>
+            </p>
+          </div>
+          <h5 class="cart__price-total">
+            <span class="heading-5 white uppercase">Total:</span>
+            <span class="heading-6 white" id="cart-total">{{ cart.total_price | money }}</span>
+          </h5>
+        </div>
+
+        <div class="cart__price-btns">
+          <a href="#" class="cart__price-checkout">Proceed to checkout</a>
+          <a href="{{ routes.all_products_collection_url }}" class="cart__price-shop">Continue shopping</a>
         </div>
       </div>
     </form>
@@ -87,6 +100,8 @@
     </div>
   </div>
 {% endif %}
+
+<script></script>
 
 {% schema %}
 {

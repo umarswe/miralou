@@ -33,7 +33,7 @@
     {% for block in section.blocks %}
       {% if block.type == 'brand' %}
         <a href="{{ block.settings.brand_url }}">
-          <img src="{{ block.settings.brand_logo |  image_url: width: 170  }}" alt="" width="170" height="84">
+          <img src="{{ block.settings.brand_logo |  image_url: width: 1000  }}" alt="" width="170" height="84">
         </a>
       {% endif %}
     {% endfor %}

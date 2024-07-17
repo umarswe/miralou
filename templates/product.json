@@ -2,8 +2,15 @@
   "sections": {
     "main": {
       "type": "main-product",
-      "settings": {}
+      "settings": {
+        "cart_title": "Add to cart",
+        "wishlist_title": "Add to wishlist",
+        "description": "Description",
+        "toggle_btn": "shopify:\/\/shop_images\/toggle.webp"
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }

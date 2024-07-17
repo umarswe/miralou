@@ -1,0 +1,16 @@
+<p class="text-5 white cart__header-text">
+  <a href="{{ routes.root_url }}" class="white">Home</a>
+  {% if template == 'cart' %}
+    / Shopping Cart
+  {% elsif template == 'page' and page_title == 'About Us' %}
+    / About Us
+  {% elsif template == 'page' and page_title == 'FAQ' %}
+    / FAQ
+  {% elsif template == 'product' %}
+    / {{ product.title }}
+  {% elsif template == 'collection' %}
+    / {{ collection.title }}
+  {% else %}
+    / {{ page_title }}
+  {% endif %}
+</p>

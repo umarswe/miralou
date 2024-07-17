@@ -8,21 +8,21 @@
             "type": "navigation",
             "settings": {
               "nav_icon": "search",
-              "nav_icon_image": "shopify:\/\/shop_images\/search.png"
+              "nav_icon_image": "shopify:\/\/shop_images\/search.webp"
             }
           },
           "navigation_edjMN9": {
             "type": "navigation",
             "settings": {
               "nav_icon": "wishlist",
-              "nav_icon_image": "shopify:\/\/shop_images\/heart.png"
+              "nav_icon_image": "shopify:\/\/shop_images\/heart_1.webp"
             }
           },
           "navigation_tafdpT": {
             "type": "navigation",
             "settings": {
               "nav_icon": "cart",
-              "nav_icon_image": "shopify:\/\/shop_images\/shopping-cart.png"
+              "nav_icon_image": "shopify:\/\/shop_images\/shopping-cart.webp"
             }
           }
         },
@@ -32,7 +32,7 @@
           "navigation_tafdpT"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/Miralou.png"
+          "logo": "shopify:\/\/shop_images\/Miralou.webp"
         }
       },
       "footer": {
@@ -42,28 +42,28 @@
             "type": "media",
             "settings": {
               "social_url": "https:\/\/facebook.com",
-              "social_icon": "shopify:\/\/shop_images\/Group_53.png"
+              "social_icon": "shopify:\/\/shop_images\/Group-53.webp"
             }
           },
           "media_rQynrU": {
             "type": "media",
             "settings": {
               "social_url": "",
-              "social_icon": "shopify:\/\/shop_images\/Group_54.png"
+              "social_icon": "shopify:\/\/shop_images\/Group-54.webp"
             }
           },
           "media_WCHPj3": {
             "type": "media",
             "settings": {
               "social_url": "",
-              "social_icon": "shopify:\/\/shop_images\/Group_55.png"
+              "social_icon": "shopify:\/\/shop_images\/Group-55_1.webp"
             }
           },
           "media_V3PX4Y": {
             "type": "media",
             "settings": {
               "social_url": "",
-              "social_icon": "shopify:\/\/shop_images\/Group_56.png"
+              "social_icon": "shopify:\/\/shop_images\/Group-56.webp"
             }
           }
         },
@@ -75,12 +75,22 @@
         ],
         "settings": {
           "social_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "logo": "shopify:\/\/shop_images\/logo-white.png",
+          "logo": "shopify:\/\/shop_images\/logo-white_1.webp",
           "nav_info": "Information",
           "nav_links": "Quick links",
           "nav_contact": "Contact us",
           "copyright": "Copyright © 2022 Miralou",
           "rights": "All right reserved"
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "title": "Your cart",
+          "close_icon": "shopify:\/\/shop_images\/circle-x.webp",
+          "decrease": "shopify:\/\/shop_images\/Vector-left.webp",
+          "increase": "shopify:\/\/shop_images\/Vector-right.webp",
+          "close": "shopify:\/\/shop_images\/circle-x.webp"
         }
       }
     },

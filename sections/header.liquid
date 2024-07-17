@@ -2,7 +2,14 @@
 
 <header class="header">
   <div class="header__logo">
-    <img src="{{ section.settings.logo |  image_url: width: 106}}" width="106" height="24" alt="">
+    <a href="/">
+      <img
+        src="{{ section.settings.logo |  image_url: width: 500 }}"
+        width="106"
+        height="24"
+        alt=""
+      >
+    </a>
   </div>
 
   <ul class="header__links">
@@ -23,15 +30,17 @@
 
         {% if icon_type == 'search' %}
           <a href="/search">
-            <img src="{{ icon_image | image_url: width: 24 }}" width="24" height="24" alt="Search">
+            <img src="{{ icon_image | image_url: width: 500 }}" width="24" height="24" alt="Search">
           </a>
         {% elsif icon_type == 'wishlist' %}
           <a href="/pages/wishlist">
-            <img src="{{ icon_image | image_url: width: 24 }}" width="24" height="24" alt="Wishlist">
+            <img src="{{ icon_image | image_url: width: 500 }}" width="24" height="24" alt="Wishlist">
           </a>
         {% elsif icon_type == 'cart' %}
-          <a href="{{ routes.cart_url }}">
-            <img src="{{ icon_image | image_url: width: 24 }}" width="24" height="24" alt="Cart">
+          <a class="cart__url" href="{{ routes.cart_url }}">
+            <img src="{{ icon_image | image_url: width: 500 }}" width="24" height="24" alt="Cart">
+
+            <div class="cart__url-count">{{ cart.item_count }}</div>
           </a>
         {% endif %}
       {% endif %}

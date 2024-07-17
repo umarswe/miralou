@@ -4,7 +4,7 @@
   <div class="footer__wrapper">
     <div class="footer__content">
       <div class="footer__social">
-        <img src="{{ section.settings.logo |  image_url: width: 106 }}" width="106" height="24" alt="">
+        <img src="{{ section.settings.logo |  image_url: width: 500 }}" width="106" height="24" alt="">
         <p class="text-5 white footer__social-text">{{ section.settings.social_text }}</p>
 
         <div class="footer__social-icons">
@@ -14,14 +14,14 @@
                 {% if block.settings.social_url contains 'facebook.com' %}
                   <img
                     class="facebook-icon"
-                    src="{{ block.settings.social_icon | image_url: width: 14 }}"
+                    src="{{ block.settings.social_icon | image_url: width: 100 }}"
                     width="14"
                     height="24"
                     alt=""
                   >
                 {% else %}
                   <img
-                    src="{{ block.settings.social_icon | image_url: width: 24 }}"
+                    src="{{ block.settings.social_icon | image_url: width: 100 }}"
                     width="24"
                     height="24"
                     alt=""

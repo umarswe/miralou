@@ -1,0 +1,14 @@
+{% assign product_name = product.title %}
+{% assign collection_name = collection.title | default: 'Men' %}
+
+<p class="text-5 gray">
+  {% if product_name contains 'Men' %}
+    For Men / {{ collection_name }} / {{ product_name }}
+  {% elsif product_name contains 'Kids' %}
+    For Kids / {{ collection_name }} / {{ product_name }}
+  {% elsif product_name contains 'Women' %}
+    For Women / {{ collection_name }} / {{ product_name }}
+  {% else %}
+    {{ collection_name }} / {{ product_name }}
+  {% endif %}
+</p>

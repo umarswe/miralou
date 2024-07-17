@@ -102,11 +102,61 @@
   margin-top: 20px;
 }
 
-.cart__price-wrapper {
-  width: 370px;
-}
-
 .cart__price {
+  width: 370px;
+  height: 264px;
   padding: 30px;
   background-color: var(--color-secondary-black);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart__price-title {
+  color: var(--color-white);
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-secondary-gray);
+}
+
+.cart__price-subtotal {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-secondary-gray);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__price-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart__price-btns {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__price-checkout,
+.cart__price-shop {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  border-radius: 6px;
+}
+
+.cart__price-checkout {
+  padding: 10px 12px;
+  background-color: var(--color-secondary-gray);
+  color: var(--color-white);
+}
+
+.cart__price-shop {
+  padding: 10px 16.5px;
+  border: 1px solid var(--color-red);
 }
