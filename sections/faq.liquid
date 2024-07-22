@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="{{ 'faq.css' |  asset_url }}">
+
+<div class="faq__container">
+  <div class="faq__header">
+    <div class="faq__image-wrapper">
+      <img
+        class="faq__image"
+        src="{{ section.settings.faq__bg |  image_url: width: 2000 }}"
+        width=""
+        height=""
+        alt=""
+      >
+    </div>
+    <div class="faq__content">
+      {% render 'breadcrumb' %}
+      <h2 class="heading-2 uppercase white">{{ section.settings.title }}</h2>
+    </div>
+  </div>
+
+  <div class="faq__wrapper">
+    <div class="faq__clip-path"></div>
+    <form class="faq__search-content">
+      <input class="faq__search-input" placeholder="What can we help you to find?" type="text">
+      <button class="faq__search-button">Search</button>
+    </form>
+
+    <div class="faq__accordion-box">
+      <div class="faq__accordion-wrapper">
+        <h4 class="heading-4 uppercase white">Miralou 2021</h4>
+        <div class="faq__accordion">
+          {% for block in section.blocks %}
+            {% if block.type == 'faq-block' %}
+              <details class="faq__accordion-item">
+                <summary class="faq__accordion-header">
+                  <h6 class="heading-6 uppercase white">{{ block.settings.title }}</h6>
+                </summary>
+                <p class="text-5 faq__accordion-text">{{ block.settings.text }}</p>
+              </details>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "faq__bg",
+      "label": "FAQ background"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "FAQ Title",
+      "default": "Default Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq-block",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "Default Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Answer",
+          "default": "Default Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
