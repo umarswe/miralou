@@ -34,10 +34,9 @@ function addCartDrawerListeners() {
     .forEach((button) => {
       button.addEventListener("click", async () => {
         // Get line item key
-        const rootItem =
-          button.parentElement.parentElement.parentElement.parentElement;
+        const rootItem = button.closest(".cart-drawer-item");
 
-        const key = rootItem.getAttribute("data-line-item-key");
+        const key = rootItem.dataset.lineItemKey;
 
         // Get new quantity
         const currentQuantity = Number(
@@ -48,23 +47,24 @@ function addCartDrawerListeners() {
         );
         const newQuantity = isUp ? currentQuantity + 1 : currentQuantity - 1;
 
-        // Ajax update\
-        const res = await fetch("/cart/update.js", {
-          method: "post",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ updates: { [key]: newQuantity } }),
-        });
-        const cart = await res.json();
-
+        const cart = await updateCart({ [key]: newQuantity });
         updateCartItemCounts(cart.item_count);
-
-        // Update cart
         updateCartDrawer();
       });
     });
+
+  document.querySelectorAll(".cart-drawer-remove").forEach((button) =>
+    button.addEventListener("click", async (e) => {
+      console.log(e.currentTarget);
+
+      const key =
+        e.currentTarget.closest(".cart-drawer-item").dataset.lineItemKey;
+
+      const cart = await updateCart({ [key]: 0 });
+      updateCartItemCounts(cart.item_count);
+      updateCartDrawer();
+    })
+  );
 
   document.querySelector(".cart-drawer-box").addEventListener("click", (e) => {
     e.stopPropagation();
@@ -111,3 +111,16 @@ document.querySelectorAll('a[href="/cart"]').forEach((a) => {
     openCartDrawer();
   });
 });
+
+async function updateCart(updates) {
+  const res = await fetch("/cart/update.js", {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ updates }),
+  });
+  const cart = await res.json();
+  return cart;
+}

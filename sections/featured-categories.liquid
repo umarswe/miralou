@@ -4,26 +4,7 @@
   <div class="collection__clip"></div>
 
   <div class="collection__content">
-    <div class="categories">
-      <h3 class="heading-3 red uppercase">{{ section.settings.heading }}</h3>
-      <p class="text-3 secondary-gray collection__text">{{ section.settings.paragraph }}</p>
-
-      <div class="categories__wrapper">
-        {% for collection in section.settings.collections %}
-          <div class="categories__list">
-            <img src="{{ collection.featured_image |  image_url: width: 390 }}" width="390" height="430" alt="">
-
-            <div class="categories__list-desc">
-              <h6 class="heading-4 red uppercase">{{ collection.title }}</h6>
-              <p class="text-4 white">
-                {{ collection.products.size }}
-                {% if collection.products.size > 1 %}products{% else %}product{% endif %}
-              </p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
+    {% render 'categories' with heading: section.settings.heading, paragraph: section.settings.paragraph, collections: section.settings.collections %}
   </div>
 </div>
 

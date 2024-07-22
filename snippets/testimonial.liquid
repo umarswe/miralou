@@ -1,0 +1,45 @@
+<div class="about-us__testimonial">
+  <h2 class="heading-4 white uppercase">{{ section.settings.title }}</h2>
+  <div class="about-us__testimonial-box">
+    <div class="chevron__left slick-prev">
+      {% render 'chevron' %}
+    </div>
+    <div class="slider">
+      {% for block in section.blocks %}
+        {% if block.type == 'testimonial' %}
+          <div class="testimonial-item">
+            <p class="text-2 gray testimonial__text">{{ block.settings.description }}</p>
+            <h5 class="heading-5 red uppercase">-{{ block.settings.author }}</h5>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="chevron__right slick-next">
+      {% render 'chevron' %}
+    </div>
+  </div>
+
+  <div class="about-us__brands">
+    {% for block in section.blocks %}
+      {% if block.type == 'brand' %}
+        <a href="{{ block.settings.brand_url }}">
+          <img src="{{ block.settings.brand_logo | image_url: width: 1000 }}" alt="" width="170" height="84">
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script type="text/javascript" defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    $('.slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '.slick-prev',
+      nextArrow: '.slick-next',
+      dots: true,
+    });
+  });
+</script>

@@ -15,29 +15,7 @@
     </div>
   </div>
 
-  <div class="about-us__testimonial">
-    <h2 class="heading-4 white uppercase">{{ section.settings.title }}</h2>
-    <div class="about-us__testimonial-box">
-      <div class="chevron__left">
-        {% render 'chevron' %}
-      </div>
-      <p class="text-2 gray testimonial__text">{{ section.settings.description }}</p>
-      <h5 class="heading-5 red uppercase">-{{ section.settings.author }}</h5>
-      <div class="chevron__right">
-        {% render 'chevron' %}
-      </div>
-    </div>
-  </div>
-
-  <div class="about-us__brands">
-    {% for block in section.blocks %}
-      {% if block.type == 'brand' %}
-        <a href="{{ block.settings.brand_url }}">
-          <img src="{{ block.settings.brand_logo |  image_url: width: 1000  }}" alt="" width="170" height="84">
-        </a>
-      {% endif %}
-    {% endfor %}
-  </div>
+  {% render 'testimonial' %}
 </div>
 
 {% schema %}
@@ -93,20 +71,28 @@
       ]
     },
     {
-      "type": "testimonials",
-      "name": "Testimonials",
+      "type": "testimonial",
+      "name": "Testimonial",
       "settings": [
         {
-          "type": "text",
-          "id": "testimonial_text",
-          "label": "Text"
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "This is a sample testimonial description."
         },
         {
           "type": "text",
-          "id": "testimonial_author",
-          "label": "Author"
+          "id": "author",
+          "label": "Author",
+          "default": "John Doe"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
     }
   ]
 }

@@ -61,13 +61,37 @@
             "brand_url": "",
             "brand_logo": "shopify:\/\/shop_images\/logo_4.png"
           }
+        },
+        "testimonial_GwkQNH": {
+          "type": "testimonial",
+          "settings": {
+            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
+            "author": "Andrew Charlston"
+          }
+        },
+        "testimonial_bF9JxE": {
+          "type": "testimonial",
+          "settings": {
+            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
+            "author": "John Doe"
+          }
+        },
+        "testimonial_cPmeFB": {
+          "type": "testimonial",
+          "settings": {
+            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
+            "author": "Steven Gerard"
+          }
         }
       },
       "block_order": [
         "brand_hRyaFA",
         "brand_TpLc9V",
         "brand_7TgX7C",
-        "brand_J8xHzJ"
+        "brand_J8xHzJ",
+        "testimonial_GwkQNH",
+        "testimonial_bF9JxE",
+        "testimonial_cPmeFB"
       ],
       "settings": {
         "heading": "About miralou",

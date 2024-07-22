@@ -21,6 +21,7 @@
   width: 1170px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 100px;
 }
 
 .collection__text {
@@ -29,7 +30,6 @@
 
 .categories__wrapper {
   display: flex;
-  margin-bottom: 100px;
 }
 
 .categories__list {
