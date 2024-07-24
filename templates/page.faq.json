@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "faq-hero": {
+      "type": "faq-hero",
+      "settings": {
+        "faq__bg": "shopify:\/\/shop_images\/faq-bg.png",
+        "title": "FAQ"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+      }
+    },
+    "faq-accordions": {
+      "type": "faq-accordions",
+      "blocks": {
+        "faq_block_bPFmBX": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        },
+        "faq_block_mqn8kk": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        },
+        "faq_block_myMTwb": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        },
+        "faq_block_pRGybx": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_bPFmBX",
+        "faq_block_mqn8kk",
+        "faq_block_myMTwb",
+        "faq_block_pRGybx"
+      ],
+      "settings": {
+        "title": "miralou 2024",
+        "title_color": "#ffffff"
+      }
+    },
+    "faq_accordions_tLtTQm": {
+      "type": "faq-accordions",
+      "blocks": {
+        "faq_block_ztJNcy": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        },
+        "faq_block_bwcP9t": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        },
+        "faq_block_k8nNaJ": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        },
+        "faq_block_NpLHEm": {
+          "type": "faq-block",
+          "settings": {
+            "title": "Default Title",
+            "text": "Default Text"
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_ztJNcy",
+        "faq_block_bwcP9t",
+        "faq_block_k8nNaJ",
+        "faq_block_NpLHEm"
+      ],
+      "settings": {
+        "title": "Miralou 2024",
+        "title_color": "#000000"
+      }
+    },
+    "faq-form": {
+      "type": "faq-form",
+      "settings": {
+      }
+    },
+    "newsseller": {
+      "type": "newsseller",
+      "settings": {
+        "heading": "our newsseller",
+        "text": "Subscribe to get more useful information about us and to get you 15% discount off your next purchase",
+        "button_text": "Subscribe"
+      }
+    }
+  },
+  "order": [
+    "faq-hero",
+    "faq",
+    "faq-accordions",
+    "faq_accordions_tLtTQm",
+    "faq-form",
+    "newsseller"
+  ]
+}

@@ -1,0 +1,94 @@
+<div class="faq__accordion-box">
+  <div class="faq__accordion-wrapper">
+    <h4 style="color: {{ section.settings.title_color }};" class="heading-4 uppercase">{{ section.settings.title }}</h4>
+    <div class="faq__accordion">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq-block' %}
+          <details class="faq__accordion-item">
+            <summary class="faq__accordion-header">
+              <h6 class="heading-6 uppercase white">{{ block.settings.title }}</h6>
+            </summary>
+            <p class="text-5 faq__accordion-text">{{ block.settings.text }}</p>
+          </details>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq__accordion-item').forEach((detail) => {
+    const summary = detail.querySelector('summary');
+    const content = detail.querySelector('.faq__accordion-text');
+
+    detail.style.height = summary.offsetHeight + 'px';
+
+    detail.addEventListener('toggle', (event) => {
+      if (detail.open) {
+        detail.style.height = summary.offsetHeight + content.scrollHeight + 'px';
+        content.style.opacity = 1;
+      } else {
+        const startHeight = detail.scrollHeight + 'px';
+        detail.style.height = startHeight;
+
+        requestAnimationFrame(() => {
+          detail.style.height = summary.offsetHeight + 'px';
+        });
+
+        content.style.opacity = 0;
+      }
+    });
+
+    // Initialize height for already open details
+    if (detail.open) {
+      detail.style.height = summary.offsetHeight + content.scrollHeight + 'px';
+      content.style.opacity = 1;
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq-block",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "Default Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Answer",
+          "default": "Default Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -81,12 +81,12 @@
 .faq__accordion-box {
   width: 1170px;
   margin: 0 auto;
-  margin-top: 100px;
 }
 
 .faq__accordion-wrapper {
   display: flex;
   gap: 100px;
+  margin-bottom: 25px;
   padding-top: 25px;
   border-top: 1px solid var(--color-secondary-gray);
 }
@@ -99,30 +99,30 @@
 
 .faq__accordion-item {
   width: 570px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
 }
 
-.faq__accordion-item[open] .faq__accordion-header ~ * {
-  animation: sweep 0.5s ease-in-out;
+.faq__accordion-item[open] .faq__accordion-text {
+  opacity: 1;
 }
 
-@keyframes sweep {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.faq__accordion-item .faq__accordion-text {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .faq__accordion-header {
+  position: relative;
   background-color: var(--color-red);
   cursor: pointer;
   outline: none;
 
   display: flex;
+  justify-content: center;
+
   border-radius: 6px;
   padding: 12px 0;
-  justify-content: center;
 }
 
 .faq__accordion-text {
@@ -131,4 +131,52 @@
   text-align: center;
   border-radius: 6px;
   background-color: var(--color-secondary-white);
+}
+
+.faq__form {
+  max-width: 1170px;
+  margin: 100px auto;
+}
+
+.form__wrapper {
+  max-width: 770px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.form__wrapper input {
+  outline: none;
+  border: 1px solid var(--color-red);
+  padding: 10px 30px;
+  color: var(--color-gray);
+  border-radius: 6px;
+}
+
+.form__wrapper textarea {
+  outline: none;
+  resize: none;
+  height: 190px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 30px;
+  border-radius: 6px;
+  border: 1px solid var(--color-red);
+}
+
+.form__submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.form__submit-btn button {
+  display: inline;
+  background-color: var(--color-gray);
+  border: none;
+  border-radius: 6px;
+  padding: 10px 45px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-white);
 }

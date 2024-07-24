@@ -1,0 +1,34 @@
+<div class="faq__header">
+  <div class="faq__image-wrapper">
+    <img
+      class="faq__image"
+      src="{{ section.settings.faq__bg |  image_url: width: 2000 }}"
+      width=""
+      height=""
+      alt=""
+    >
+  </div>
+  <div class="faq__content">
+    {% render 'breadcrumb' %}
+    <h2 class="heading-2 uppercase white">{{ section.settings.title }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "faq__bg",
+      "label": "FAQ background"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "FAQ Title",
+      "default": "Default Title"
+    }
+  ]
+}
+{% endschema %}
