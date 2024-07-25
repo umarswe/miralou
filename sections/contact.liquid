@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="{{ "contact.css" |  asset_url }}">
+
+<div class="contact__container">
+  <div class="contact__box">
+    <div class="contact__content">
+      <h4 class="heading-4 red uppercase">{{ section.settings.title }}</h4>
+      <p class="text-2">{{ section.settings.text }}</p>
+    </div>
+
+    <form class="contact__form">
+      <input class="contact_form-email" type="email" placeholder="{{ section.settings.email_placeholder }}">
+      <input class="contact_form-name" type="text" placeholder="{{ section.settings.name_placeholder }}">
+      <textarea class="contact_form-texarea" placeholder="{{ section.settings.texarea_placeholder }}"></textarea>
+      <div class="contact__from-cta">
+        <button class="link-gray" type="submit">{{ section.settings.submit }}</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Default Text"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email Placeholder",
+      "default": "Enter Your E-mail"
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name Placeholder",
+      "default": "Enter Your Name"
+    },
+    {
+      "type": "text",
+      "id": "texarea_placeholder",
+      "label": "Texarea Placeholder",
+      "default": "Your question..."
+    },
+    {
+      "type": "text",
+      "id": "submit",
+      "label": "Button Text",
+      "default": "Submit"
+    }
+  ]
+}
+{% endschema %}

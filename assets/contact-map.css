@@ -1,0 +1,56 @@
+.contact__map-container {
+  max-width: 1170px;
+  margin: 100px auto;
+  display: flex;
+}
+
+.contact__map-content {
+  width: 370px;
+  padding: 40px 30px;
+  background-color: var(--color-secondary-black);
+}
+
+.contact__address-item {
+  margin-bottom: 30px;
+}
+
+.contact__address-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 23px;
+}
+
+.address__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address__location,
+.address__phone,
+.address__email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.address__location-image,
+.address__phone-image,
+.address__email-image {
+  width: 15px;
+  height: 15px;
+
+  display: flex;
+  align-items: center;
+}
+
+.address__social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.contact__map {
+  width: 800px;
+}

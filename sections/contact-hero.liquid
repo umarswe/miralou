@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="{{ "contact-hero.css" |  asset_url }}">
+
+<div class="contact__hero">
+  <div class="contact__hero-image">
+    <img src="{{ section.settings.hero_image |  image_url: width: 2000 }}" width="1920" height="230" alt="">
+  </div>
+
+  <div class="contact__hero-content">
+    {% render 'breadcrumb' %}
+    <h2 class="heading-2 white uppercase">{{ section.settings.title }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    }
+  ]
+}
+{% endschema %}

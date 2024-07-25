@@ -1,0 +1,28 @@
+.contact__hero {
+  position: relative;
+}
+
+.contact__hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  z-index: -1;
+}
+
+.contact__hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact__hero-content {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 71px 0;
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}

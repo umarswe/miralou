@@ -1,21 +1,89 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "contact-hero": {
+      "type": "contact-hero",
       "settings": {
+        "hero_image": "shopify://shop_images/contact-bg.png",
+        "title": "Contact us"
+      }
+    },
+    "contact-map": {
+      "type": "contact-map",
+      "blocks": {
+        "map_block_FbmU4i": {
+          "type": "map-block",
+          "settings": {
+            "location_icon": "shopify://shop_images/ep_location.png",
+            "phone_icon": "shopify://shop_images/cil_phone.png",
+            "email_icon": "shopify://shop_images/fontisto_email.png",
+            "title": "Miralou №1",
+            "location": "2715 Ash Dr. San Jose, South Dakota 83475",
+            "phone": "(808) 555-0111",
+            "email": "miralou.conacts@example.com"
+          }
+        },
+        "map_block_gTei3p": {
+          "type": "map-block",
+          "settings": {
+            "location_icon": "shopify://shop_images/ep_location.png",
+            "phone_icon": "shopify://shop_images/cil_phone.png",
+            "email_icon": "shopify://shop_images/fontisto_email.png",
+            "title": "Miralou №2",
+            "location": "445 MLK Street, South Dakota 55631",
+            "phone": "(808) 333-0888",
+            "email": "miralou.conacts@example.com"
+          }
+        },
+        "media_HTqLzm": {
+          "type": "media",
+          "settings": {
+            "social_url": "https://facebook.com",
+            "social_icon": "shopify://shop_images/Group_53_be570846-e90f-435f-9f02-eb2449d6e3dd.png"
+          }
+        },
+        "media_AG3jee": {
+          "type": "media",
+          "settings": {
+            "social_url": "https://vkontakte.com",
+            "social_icon": "shopify://shop_images/Group_54_d17d75e8-3872-4d6d-aa8f-d07eca1a8bd5.png"
+          }
+        },
+        "media_EaYRMi": {
+          "type": "media",
+          "settings": {
+            "social_url": "https://instagram.com",
+            "social_icon": "shopify://shop_images/Group_55_33ee3c1e-63d5-4460-a927-55b2e441e58d.png"
+          }
+        },
+        "media_6My9Fb": {
+          "type": "media",
+          "settings": {
+            "social_url": "https://twitter.com",
+            "social_icon": "shopify://shop_images/Group_56_3b29c1bc-51da-40ad-94bb-ce8e32c03298.png"
+          }
+        }
+      },
+      "block_order": [
+        "map_block_FbmU4i",
+        "map_block_gTei3p",
+        "media_HTqLzm",
+        "media_AG3jee",
+        "media_EaYRMi",
+        "media_6My9Fb"
+      ],
+      "settings": {}
+    },
+    "contact": {
+      "type": "contact",
+      "settings": {
+        "title": "get in touch",
+        "text": "Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis. Ullamcorper consequat donec euismod mi pulvinar.",
+        "email_placeholder": "Enter Your E-mail",
+        "name_placeholder": "Enter Your Name",
+        "texarea_placeholder": "Your question...",
+        "submit": "Submit"
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["contact-hero", "contact-map", "contact"]
 }

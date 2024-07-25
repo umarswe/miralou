@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="{{ "contact-map.css" | asset_url }}">
+
+<div class="contact__map-container">
+  <div class="contact__map-content">
+    <ul class="contact__address-list">
+      {% for block in section.blocks %}
+        {% if block.type == 'map-block' %}
+          <li class="contact__address-item">
+            <h5 class="heading-5 contact__address-title">{{ block.settings.title }}</h5>
+
+            <div class="address__wrapper">
+              <div class="address__location">
+                <div class="address__location-image">
+                  <img src="{{ block.settings.location_icon |  image_url: width: 1000 }}" width="11" height="15" alt="">
+                </div>
+                <p class="text-5 white">{{ block.settings.location }}</p>
+              </div>
+              <div class="address__phone">
+                <div class="address__phone-image">
+                  <img src="{{ block.settings.phone_icon |  image_url: width: 1000 }}" width="15" height="15" alt="">
+                </div>
+                <p class="text-5 white">{{ block.settings.phone }}</p>
+              </div>
+              <div class="address__email">
+                <div class="address__email-image">
+                  <img src="{{ block.settings.email_icon |  image_url: width: 1000 }}" width="14" height="10" alt="">
+                </div>
+                <p class="text-5 white">{{ block.settings.email }}</p>
+              </div>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <ul class="address__social-links">
+      {% for block in section.blocks %}
+        {% if block.type == 'media' %}
+          <li class="address__social-item">
+            {% if block.settings.social_url contains 'facebook.com' %}
+              <a href="{{ block.settings.social_url }}">
+                <img src="{{ block.settings.social_icon |  image_url: width: 1000 }}" width="11" height="15" alt="">
+              </a>
+            {% else %}
+              <a href="{{ block.settings.social_url }}">
+                <img src="{{ block.settings.social_icon |  image_url: width: 1000 }}" width="15" height="15" alt="">
+              </a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="contact__map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5955.571076559893!2d69.22139665890589!3d41.27627241265595!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1721839393511!5m2!1sen!2s"
+      width="800"
+      height="452"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Map",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "map-block",
+      "name": "Map",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "location_icon",
+          "label": "Location Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "phone_icon",
+          "label": "Phone Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "email_icon",
+          "label": "Email Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Default Title"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Location",
+          "default": "Default text"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "Phone",
+          "default": "Default text"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "Email",
+          "default": "Default text"
+        }
+      ]
+    },
+    {
+      "type": "media",
+      "name": "Media",
+      "settings": [
+        {
+          "type": "url",
+          "id": "social_url",
+          "label": "URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "social_icon",
+          "label": "Social Media Icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
