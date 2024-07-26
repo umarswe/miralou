@@ -1,9 +1,9 @@
 {
   "sections": {
-    "main": {
-      "type": "main-blog",
+    "blog": {
+      "type": "blog",
       "settings": {}
     }
   },
-  "order": ["main"]
+  "order": ["blog"]
 }

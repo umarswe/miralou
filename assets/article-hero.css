@@ -1,0 +1,28 @@
+.article-hero {
+  position: relative;
+}
+
+.article-hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  z-index: -1;
+}
+
+.article-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-content {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 71px 0;
+}

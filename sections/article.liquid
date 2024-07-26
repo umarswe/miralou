@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ "article.css" |  asset_url }}">
+
+<div class="article__container">
+  <div class="article__bg"></div>
+  <div class="article__content">
+    <img src="{{ article.image |  image_url: width: 1000 }}" width="870" height="440" alt="">
+
+    <div class="article__date">
+      <p class="text-5 red">{{ article.published_at | date: '%b %d, %Y' | upcase }}</p>
+      <p class="text-5">By {{ article.author }}</p>
+      {% comment %} <p class="text-5">Seen by {{ article.metafields.custom.views }} people</p> {% endcomment %}
+    </div>
+    <p class="text-2">{{ article.content }}</p>
+  </div>
+</div>

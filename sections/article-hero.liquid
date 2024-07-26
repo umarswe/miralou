@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="{{ "article-hero.css" |  asset_url}}">
+
+<div class="article-hero">
+  <div class="article-hero__image">
+    <img src="{{ section.settings.bg_image |  image_url: width: 1000 }}" width="1920" height="230" alt="">
+  </div>
+
+  <div class="article-content">
+    {% render 'breadcrumb' %}
+    <h2 class="heading-2 uppercase white">{{ article.title }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Article Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Bg Image"
+    }
+  ]
+}
+{% endschema %}

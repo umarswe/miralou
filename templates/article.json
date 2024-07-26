@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "article-hero": {
+      "type": "article-hero",
+      "settings": {
+        "bg_image": "shopify://shop_images/blog-bg.png"
+      }
+    },
+    "article": {
+      "type": "article",
+      "settings": {}
+    },
+    "article-comments": {
+      "type": "article-comments",
+      "settings": {}
+    },
+
+    "featured_categories_gpfGPk": {
+      "type": "featured-categories",
+      "settings": {
+        "heading": "Default Heading",
+        "paragraph": "Default Paragraph",
+        "collections": ["kids", "men", "women"],
+        "products": []
+      }
+    },
+    "newsseller_YfJMac": {
+      "type": "newsseller",
+      "settings": {
+        "heading": "our newsseller",
+        "text": "Subscribe to get more useful information about us and to get you 15% discount offyour next purchase",
+        "button_text": "Subscribe"
+      }
+    }
+  },
+  "order": [
+    "article-hero",
+    "article",
+    "article-comments",
+    "featured_categories_gpfGPk",
+    "newsseller_YfJMac"
+  ]
+}

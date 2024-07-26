@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="{{ "article-comments.css" |  asset_url }}">
+
+<div class="article-comments__container">
+  <h4 class="heading-4 uppercase">Comments on {{ article.title }} ({{ article.comments_count }})</h4>
+  <ul class="article-comments__list">
+    {% for comment in article.comments %}
+      <li class="article-comments__item">
+        <h5 class="heading-5 uppercase">{{ comment.author }}</h5>
+        <p class="text-4 article-comments__text">{{ comment.content }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="article-comments">
+    <h4 class="heading-4 red uppercase">Write A Comment</h4>
+    {% form 'new_comment', article %}
+      {{ form.errors | default_errors }}
+
+      <div class="article-comments__form">
+        <div class="article-comments__name">
+          <label for="name"></label>
+          <input
+            class="article-comments__input"
+            placeholder="Name"
+            type="text"
+            name="comment[author]"
+            value="{{ form.author }}"
+          >
+        </div>
+
+        <div class="article-comments__email">
+          <label for="email"></label>
+          <input
+            class="article-comments__input"
+            placeholder="Email"
+            type="email"
+            name="comment[email]"
+            value="{{ form.email }}"
+          >
+        </div>
+
+        <div class="article-comments__texarea">
+          <label for="comment"></label>
+          <textarea
+            class="article-comments__text-field"
+            placeholder="Comment..."
+            name="comment[body]"
+          >{{ form.body }}</textarea>
+        </div>
+      </div>
+      <div class="article-comment__cta">
+        <input class="link-gray" type="submit" value="Submit">
+      </div>
+    {% endform %}
+  </div>
+</div>
