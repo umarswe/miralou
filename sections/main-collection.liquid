@@ -1,9 +1,11 @@
 <link rel="stylesheet" href="{{ 'main-collection.css' |  asset_url }}">
 
 <div class="main-collection">
+  {% comment %} TODO: 8 should be dynamic, use "range" type of settings, and make step 4  {% endcomment %}
   {% paginate collection.products by 8 %}
     <ul class="main-collection__list">
       {% for product in collection.products %}
+        {% comment %} this should move to "product-card.liquid" {% endcomment %}
         <li class="main-collection__item">
           <div class="main-collection__image">
             <img src="{{ product.featured_image |  image_url: width: 1000 }}" width="270" height="190" alt="">

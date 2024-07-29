@@ -3,7 +3,9 @@
 <div class="collection">
   <div class="collection__clip"></div>
 
+  {% comment %} TODO: get rid of 'categories' snippet, move all of its content to this file and throw it into a garbage {% endcomment %}
   <div class="collection__content">
+    {% comment %} TODO: no need for with but there should be a comma(,) after 'categories' {% endcomment %}
     {% render 'categories' with heading: section.settings.heading, paragraph: section.settings.paragraph, collections: section.settings.collections %}
   </div>
 </div>
@@ -29,6 +31,7 @@
       "id": "collections",
       "label": "Collections"
     },
+    // remove product_list
     {
       "type": "product_list",
       "id": "products",

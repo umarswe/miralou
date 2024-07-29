@@ -1,15 +1,19 @@
 <link rel="stylesheet" href="{{ 'our-products.css' | asset_url }}">
 
 <div class="our-products__container">
+  {% comment %} TODO: there should only be one <h1> in one page, change this to <h2> {% endcomment %}
   <h1 class="heading-4 black uppercase our-products__title">Our Products</h1>
 
+  {% comment %} TODO: don't use div for list {% endcomment %}
   <div class="our-products__wrapper">
     {% for product in section.settings.collection.products %}
+      {% comment %} TODO: move this into a 'product-card.liquid' and reuse it accross the website {% endcomment %}
       <div class="our-products__card">
         <img src="{{ product.featured_image.src | image_url: width: 270 }}" alt="" width="270" height="190">
         <p class="text-4 gray our-products__brand">Nike</p>
         <h6 class="heading-6 uppercase">{{ product.title }}</h6>
         <h6 class="heading-6 red our-products__price">{{ product.price | money }}</h6>
+        {% comment %} TODO: add href {% endcomment %}
         <a href="#" class="link-black text-4 our-products__link">View product</a>
       </div>
     {% endfor %}

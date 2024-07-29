@@ -4,6 +4,7 @@
   <div class="about-us__clip"></div>
   <div class="about-us__box">
     <div class="about-us__image">
+      {% comment %} TODO: use images from settings {% endcomment %}
       <img src="{{ 'about-us.png' |  asset_url }}" width="570" height="324" alt="">
     </div>
 
@@ -15,6 +16,7 @@
     </div>
   </div>
 
+  {% comment %} TODO: Testimonial should be a separate section with its own settings not a snippet {% endcomment %}
   {% render 'testimonial' %}
 </div>
 

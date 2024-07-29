@@ -3,20 +3,29 @@
 <div class="blog__container">
   <h4 class="heading-4 uppercase">{{ section.settings.title }}</h4>
   <p class="text-3 gray blog__text">{{ section.settings.text }}</p>
+
+  {% comment %} TODO: don't use div for lists {% endcomment %}
   <div class="blog__box-wrapper">
     {% for article in section.settings.blog.articles %}
+
+      {% comment %} move this into a "blog-card.liquid" {% endcomment %}
       <div class="blog__box">
         <img src="{{ article.image |  image_url: width: 390 }}" width="390" height="304" alt="">
         <p class="text-5 gray blog__box-date">{{ article.published_at | date: '%M-%d-%y' }}</p>
         <h6 class="heading-6 red uppercase">{{ article.title }}</h6>
+        {% comment %} TODO: add href {% endcomment %}
         <a href="#" class="black-link">Read more &rarr;</a>
       </div>
     {% endfor %}
   </div>
 
+
+  {% comment %} blog social should be a separate section {% endcomment %}
   <div class="blog__social">
+    {% comment %} TODO: use images from settings {% endcomment %}
     <img src="{{ 'instagram.png' |  asset_url }}" width="1170px" height="239" alt="">
 
+    {% comment %} TODO: use <a> tag because customers should be able to go into the instagram account {% endcomment %}
     <div class="blog__social-content">
       <h6 class="heading-6 uppercase">@{{ section.settings.social_media_text }}</h6>
       {% render 'instagram' %}

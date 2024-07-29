@@ -1,10 +1,17 @@
+{% comment %} if this snippet is wrapped between <ul></ul> tag, change <div> into <li> {% endcomment %}
+
 <div class="categories">
   <h3 class="heading-3 red uppercase">{{ heading }}</h3>
   <p class="text-3 secondary-gray collection__text">{{ paragraph }}</p>
 
+  {% comment %} dont use div for lists {% endcomment %}
   <div class="categories__wrapper">
     {% for collection in collections %}
       {% if collection.title != 'Home page' %}
+        {% comment %} Move this into a snippet  {% endcomment %}
+        {% comment %} Ex: {% render 'collection-card' with collection %}  {% endcomment %}
+        
+
         <div class="categories__list">
           <img src="{{ collection.featured_image | image_url: width: 390 }}" width="390" height="430" alt="">
 
