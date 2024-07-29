@@ -7,7 +7,6 @@
   {% comment %} TODO: don't use div for lists {% endcomment %}
   <div class="blog__box-wrapper">
     {% for article in section.settings.blog.articles %}
-
       {% comment %} move this into a "blog-card.liquid" {% endcomment %}
       <div class="blog__box">
         <img src="{{ article.image |  image_url: width: 390 }}" width="390" height="304" alt="">
@@ -18,7 +17,6 @@
       </div>
     {% endfor %}
   </div>
-
 
   {% comment %} blog social should be a separate section {% endcomment %}
   <div class="blog__social">

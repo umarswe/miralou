@@ -33,9 +33,8 @@
   margin-bottom: 20px;
 }
 
-.our-products__btn {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+.our-products__cta {
+  display: flex;
+  justify-content: center;
   margin-top: 40px;
 }

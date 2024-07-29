@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ "blog.css" |  asset_url }}">
 
-{% paginate blog.articles by 1 %}
+{% paginate blog.articles by 3 %}
   <ul class="blogs__list">
     {% for article in blog.articles %}
       <li class="blog__item">

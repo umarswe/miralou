@@ -1,7 +1,7 @@
 .collection {
   position: relative;
   width: 100%;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 .collection__clip {
@@ -28,8 +28,14 @@
   margin: 10px 0 30px 0;
 }
 
+.categories {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 .categories__wrapper {
   display: flex;
+  justify-content: center;
 }
 
 .categories__list {

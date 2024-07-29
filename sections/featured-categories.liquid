@@ -3,10 +3,17 @@
 <div class="collection">
   <div class="collection__clip"></div>
 
-  {% comment %} TODO: get rid of 'categories' snippet, move all of its content to this file and throw it into a garbage {% endcomment %}
-  <div class="collection__content">
-    {% comment %} TODO: no need for with but there should be a comma(,) after 'categories' {% endcomment %}
-    {% render 'categories' with heading: section.settings.heading, paragraph: section.settings.paragraph, collections: section.settings.collections %}
+  <div class="categories">
+    <h3 class="heading-3 red uppercase">{{ section.settings.heading }}</h3>
+    <p class="text-3 secondary-gray collection__text">{{ section.settings.paragraph }}</p>
+
+    <ul class="categories__wrapper">
+      {% for collection in collections %}
+        {% if collection.title != 'Home page' %}
+          {% render 'collection-card', collection: collection %}
+        {% endif %}
+      {% endfor %}
+    </ul>
   </div>
 </div>
 
@@ -25,17 +32,6 @@
       "id": "paragraph",
       "label": "Paragraph",
       "default": "Default Paragraph"
-    },
-    {
-      "type": "collection_list",
-      "id": "collections",
-      "label": "Collections"
-    },
-    // remove product_list
-    {
-      "type": "product_list",
-      "id": "products",
-      "label": "Products"
     }
   ],
   "presets": [

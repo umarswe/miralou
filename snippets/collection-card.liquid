@@ -1,0 +1,11 @@
+<li class="categories__list">
+  <img src="{{ collection.featured_image | image_url: width: 390 }}" width="390" height="430" alt="">
+
+  <div class="categories__list-desc">
+    <h6 class="heading-4 red uppercase">{{ collection.title }}</h6>
+    <p class="text-4 white">
+      {{ collection.products.size }}
+      {% if collection.products.size > 1 %}products{% else %}product{% endif %}
+    </p>
+  </div>
+</li>

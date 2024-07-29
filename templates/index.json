@@ -2,103 +2,146 @@
   "sections": {
     "image-banner": {
       "type": "image-banner",
+      "blocks": {
+        "content_image_nzMxww": {
+          "type": "content_image",
+          "settings": {
+            "content_image": "shopify:\/\/shop_images\/image-banner.png"
+          }
+        },
+        "heading_WGRwa7": {
+          "type": "heading",
+          "settings": {
+            "heading": "choose your shoes with us."
+          }
+        },
+        "paragraph_zpqHqJ": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "We will help you to choose the product that without the doubt suits you best. And we mean it"
+          }
+        },
+        "cta_DbQN6B": {
+          "type": "cta",
+          "settings": {
+            "cta_text": "Read More",
+            "cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_image_nzMxww",
+        "heading_WGRwa7",
+        "paragraph_zpqHqJ",
+        "cta_DbQN6B"
+      ],
       "settings": {
-        "content_image": "shopify:\/\/shop_images\/image-banner.png",
-        "heading": "choose your shoes with us.",
-        "paragraph": "We will help you to choose the product that without the doubt suits you best. And we mean it",
-        "cta_text": "Read More",
-        "cta_url": "shopify:\/\/pages\/contact"
+        "background_image": "shopify:\/\/shop_images\/image-banner-bg.png",
+        "margin_bottom": 40,
+        "color": "#f6f6f6"
       }
     },
     "featured-categories": {
       "type": "featured-categories",
       "settings": {
         "heading": "shop by categories",
-        "paragraph": "Pick a category you need",
-        "collections": [
-          "women",
-          "men",
-          "kids"
-        ],
-        "products": [
-
-        ]
+        "paragraph": "Pick a category you need"
       }
     },
     "our-products": {
       "type": "our-products",
       "settings": {
-        "collection": "frontpage"
+        "collection": "frontpage",
+        "header": "Default Title",
+        "cta_text": "Show more"
       }
     },
     "about-us": {
       "type": "about-us",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about.png",
+        "heading": "About miralou",
+        "text": "Ut donec suscipit nunc volutpat faucibus. Ut penatibus etiam diam facilisi at nibh nulla auctor lorem. Accumsan vulputate euismod massa sit egestas. Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis.",
+        "title": "what people say about us",
+        "description": "Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.",
+        "author": "Andrew Charlston"
+      }
+    },
+    "testimonial": {
+      "type": "testimonial",
       "blocks": {
-        "brand_hRyaFA": {
-          "type": "brand",
+        "testimonial_bbKrtA": {
+          "type": "testimonial",
           "settings": {
-            "brand_url": "https:\/\/nike.com",
-            "brand_logo": "shopify:\/\/shop_images\/Logo_1.png"
+            "description": "This is a sample testimonial description.",
+            "author": "John Doe"
           }
         },
-        "brand_TpLc9V": {
-          "type": "brand",
+        "testimonial_AkeyVd": {
+          "type": "testimonial",
           "settings": {
-            "brand_url": "https:\/\/adidas.com",
-            "brand_logo": "shopify:\/\/shop_images\/Logo_2.png"
+            "description": "This is a sample testimonial description.",
+            "author": "John Doe"
           }
         },
-        "brand_7TgX7C": {
-          "type": "brand",
+        "testimonial_Wj8z47": {
+          "type": "testimonial",
           "settings": {
-            "brand_url": "",
-            "brand_logo": "shopify:\/\/shop_images\/Logo_3.png"
+            "description": "This is a sample testimonial description.",
+            "author": "John Doe"
           }
         },
-        "brand_J8xHzJ": {
+        "testimonial_kNjJhC": {
+          "type": "testimonial",
+          "settings": {
+            "description": "This is a sample testimonial description.",
+            "author": "John Doe"
+          }
+        },
+        "brand_E9tN6p": {
           "type": "brand",
           "settings": {
             "brand_url": "",
             "brand_logo": "shopify:\/\/shop_images\/logo_4.png"
           }
         },
-        "testimonial_GwkQNH": {
-          "type": "testimonial",
+        "brand_3C7TmL": {
+          "type": "brand",
           "settings": {
-            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
-            "author": "Andrew Charlston"
+            "brand_url": "",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_3.png"
           }
         },
-        "testimonial_bF9JxE": {
-          "type": "testimonial",
+        "brand_WxTkBX": {
+          "type": "brand",
           "settings": {
-            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
-            "author": "John Doe"
+            "brand_url": "",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_2.png"
           }
         },
-        "testimonial_cPmeFB": {
-          "type": "testimonial",
+        "brand_6h3VGW": {
+          "type": "brand",
           "settings": {
-            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
-            "author": "Steven Gerard"
+            "brand_url": "",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_1.png"
           }
         }
       },
       "block_order": [
-        "brand_hRyaFA",
-        "brand_TpLc9V",
-        "brand_7TgX7C",
-        "brand_J8xHzJ",
-        "testimonial_GwkQNH",
-        "testimonial_bF9JxE",
-        "testimonial_cPmeFB"
+        "testimonial_bbKrtA",
+        "testimonial_AkeyVd",
+        "testimonial_Wj8z47",
+        "testimonial_kNjJhC",
+        "brand_E9tN6p",
+        "brand_3C7TmL",
+        "brand_WxTkBX",
+        "brand_6h3VGW"
       ],
       "settings": {
-        "heading": "About miralou",
-        "text": "Ut donec suscipit nunc volutpat faucibus. Ut penatibus etiam diam facilisi at nibh nulla auctor lorem. Accumsan vulputate euismod massa sit egestas. Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis.",
-        "title": "what people say about us",
-        "description": "Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.",
-        "author": "Andrew Charlston"
+        "text": "Default Text",
+        "title": "Default Title",
+        "description": "Default Description",
+        "author": "Default Author"
       }
     },
     "latest-news": {
@@ -124,6 +167,7 @@
     "featured-categories",
     "our-products",
     "about-us",
+    "testimonial",
     "latest-news",
     "newsseller"
   ]
