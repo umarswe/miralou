@@ -18,32 +18,37 @@
       <h5 class="heading-5 product__content-title">{{ product.title }}</h5>
       <h5 class="heading-5 red">{{ product.price | money }}</h5>
 
-
-
       <div class="product__content-actions">
         <form id="add-to-cart-form" action="/cart/add" method="post">
           <ul class="product__sizes">
             {% for variant in product.variants %}
               {% if variant.available %}
-                <li class="product__size">
+                <label for="variant-{{ variant.option1 }}" class="text-4 product__size">
                   <input
                     type="radio"
                     name="id"
+                    id="variant-{{ variant.option1 }}"
                     value="{{ variant.id }}"
-                    {% if forloop.first %}checked{% endif %}
+                    hidden
+                    {% if forloop.first %}
+                      checked
+                    {% endif %}
                   >
-                  <label class="text-4">{{ variant.option1 }}</label>
-                </li>
+                  {{ variant.option1 -}}
+                </label>
               {% endif %}
             {% endfor %}
           </ul>
 
-          {% unless product.variants.size == 1 %}
+          {% if product.variants.size == 1 %}
             <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-          {% endunless %}
-          <button type="submit" class="button__cart white">{{ section.settings.cart_title }}</button>
+          {% endif %}
+
+          <div class="product__cart-cta">
+            <button type="submit" class="button__cart white">{{ section.settings.cart_title }}</button>
+            <button type="button" class="button__wishlist">{{ section.settings.wishlist_title }}</button>
+          </div>
         </form>
-        <button class="button__wishlist">{{ section.settings.wishlist_title }}</button>
       </div>
 
       <div class="product__description">

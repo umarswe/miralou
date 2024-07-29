@@ -1,3 +1,22 @@
 <link rel="stylesheet" href="{{ "blog.css" |  asset_url }}">
 
-<div></div>
+{% paginate blog.articles by 1 %}
+  <ul class="blogs__list">
+    {% for article in blog.articles %}
+      <li class="blog__item">
+        <div class="blog__item-image">
+          <img src="{{ article.image |  image_url: width: 2000 }}" width="970" height="360" alt="">
+        </div>
+        <div class="blog__item-info">
+          <p class="text-5 red">{{ article.published_at | date: '%b %d, %Y' | upcase }}</p>
+          <p class="text-5">By {{ article.author }}</p>
+        </div>
+        <h5 class="heading-5 uppercase">{{ article.title }}</h5>
+
+        <p class="text-4 gray blog__item-content">{{ article.content | truncatewords: 35 }}</p>
+
+        <a href="{{ article.url }}">Read more &rarr;</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endpaginate %}

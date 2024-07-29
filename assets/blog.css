@@ -1,0 +1,29 @@
+.blogs__list {
+  width: 1170px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blog__item-image {
+  max-width: 1170px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.blog__item-image img {
+  object-fit: cover;
+}
+
+.blog__item-info {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.blog__item-content {
+  margin-top: 10px;
+}

@@ -30,6 +30,7 @@
                       <a href="{{ item.url }}">{{ item.product.title }}</a>
                     </h6>
                     <h6 class="heading-6 red">{{ item.final_line_price | money_with_currency }}</h6>
+                    <p class="text-5 gray">Size: {{ item.variant.title }}</p>
                   </div>
                   <div class="cart-drawer-quantity-selector">
                     <button class="cart-drawer-quantity-selector-minus" type="button">
