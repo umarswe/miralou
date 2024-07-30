@@ -149,8 +149,16 @@
       "settings": {
         "blog": "news",
         "title": "latest news",
-        "text": "Nunc rhoncus auctor risus tempor lacus urna, id laoreet sed. Euismod nisl pellentesque risus cursus fringilla tincidunt volutpat, non.",
-        "social_media_text": "Miralou"
+        "text": "Nunc rhoncus auctor risus tempor lacus urna, id laoreet sed. Euismod nisl pellentesque risus cursus fringilla tincidunt volutpat, non."
+      }
+    },
+    "blog-instagram": {
+      "type": "blog-instagram",
+      "settings": {
+        "main_image": "shopify:\/\/shop_images\/Instagram.png",
+        "url": "shopify:\/\/blogs\/article",
+        "text": "@",
+        "social_media_text": "instagram"
       }
     },
     "newsseller": {
@@ -169,6 +177,7 @@
     "about-us",
     "testimonial",
     "latest-news",
+    "blog-instagram",
     "newsseller"
   ]
 }

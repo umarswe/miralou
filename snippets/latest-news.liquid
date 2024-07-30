@@ -1,0 +1,6 @@
+<li class="blog__box">
+  <img src="{{ article.image |  image_url: width: 390 }}" width="390" height="304" alt="">
+  <p class="text-5 gray blog__box-date">{{ article.published_at | date: '%M-%d-%y' }}</p>
+  <h6 class="heading-6 red uppercase">{{ article.title }}</h6>
+  <a href="{{ article.url }}" class="black-link">Read more &rarr;</a>
+</li>

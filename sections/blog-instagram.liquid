@@ -1,0 +1,47 @@
+<div class="blog__social">
+  <div class="blog__social-image">
+    <img
+      src="{{ section.settings.main_image |  image_url: width: 1000 }}"
+      width="1170"
+      height="239"
+      alt=""
+    >
+  </div>
+  <a href="{{ section.settings.url }}" class="blog__social-content">
+    <h6 class="heading-6 uppercase">
+      {{ section.settings.text -}}
+      {{- section.settings.social_media_text }}
+    </h6>
+    {% render 'instagram' %}
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "Blog Instagram",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "URL"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "@"
+    },
+    {
+      "type": "text",
+      "id": "social_media_text",
+      "label": "Social Media",
+      "default": "Default Text"
+    }
+  ]
+}
+{% endschema %}

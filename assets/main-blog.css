@@ -24,6 +24,12 @@
 
 .blog__social {
   position: relative;
+  margin-bottom: 100px;
+}
+
+.blog__social-image {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .blog__social-content {
