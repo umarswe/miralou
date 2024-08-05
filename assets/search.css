@@ -1,0 +1,30 @@
+.search__input-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 10px;
+}
+
+.search__input {
+  outline: none;
+  width: 85%;
+  padding: 12px 30px;
+  border-radius: 6px;
+  border: 1px solid var(--color-red);
+
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-secondary-gray);
+}
+
+.search__input-submit {
+  width: 15%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-red);
+  cursor: pointer;
+
+  color: var(--color-white);
+}

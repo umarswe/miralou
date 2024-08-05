@@ -1,181 +1,194 @@
 {
   "sections": {
-    "about-company": {
-      "type": "about-company",
+    "about-us-hero": {
+      "type": "about-us-hero",
+      "settings": {
+        "header_image": "shopify:\/\/shop_images\/company-bg.png",
+        "header_title": "About us"
+      }
+    },
+    "about-us-service": {
+      "type": "about-us-service",
       "blocks": {
-        "service_rWArtd": {
+        "service_C3ydBa": {
           "type": "service",
           "settings": {
             "icon_url": "",
-            "service_icon": "shopify://shop_images/truck.png",
+            "service_icon": "shopify:\/\/shop_images\/truck.png",
             "title": "Shops Worldwide",
             "text": "Orci fusce libero duis nunc nam aliquet suspendisse enim cras. Imperdiet turpis ut nulla sapien.",
             "icon_width": 67,
             "icon_height": 37
           }
         },
-        "service_RhqJc7": {
+        "service_c8GnYf": {
           "type": "service",
           "settings": {
             "icon_url": "",
-            "service_icon": "shopify://shop_images/support.png",
-            "title": "24/7 support",
+            "service_icon": "shopify:\/\/shop_images\/support.png",
+            "title": "24\/7 support",
             "text": "Orci fusce libero duis nunc nam aliquet suspendisse enim cras. Imperdiet turpis ut nulla sapien.",
             "icon_width": 67,
             "icon_height": 37
           }
         },
-        "service_fnGJ6r": {
+        "service_EY7Vqx": {
           "type": "service",
           "settings": {
             "icon_url": "",
-            "service_icon": "shopify://shop_images/shop.png",
+            "service_icon": "shopify:\/\/shop_images\/shop.png",
             "title": "big saving shop",
             "text": "Orci fusce libero duis nunc nam aliquet suspendisse enim cras. Imperdiet turpis ut nulla sapien.",
             "icon_width": 67,
             "icon_height": 37
           }
-        },
-        "our_team_LrFf3m": {
+        }
+      },
+      "block_order": [
+        "service_C3ydBa",
+        "service_c8GnYf",
+        "service_EY7Vqx"
+      ],
+      "settings": {
+        "service_title": "We are miralou",
+        "service_text": "Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis. Ullamcorper consequat donec euismod mi pulvinar.",
+        "service_img": "shopify:\/\/shop_images\/service-box.png"
+      }
+    },
+    "featured_categories_tJegHG": {
+      "type": "featured-categories",
+      "settings": {
+        "heading": "shop by categories",
+        "paragraph": "Pick a category you need"
+      }
+    },
+    "about-us-team": {
+      "type": "about-us-team",
+      "blocks": {
+        "our_team_6cPgKN": {
           "type": "our-team",
           "settings": {
-            "avatar": "shopify://shop_images/avatar-1.png",
+            "avatar": "shopify:\/\/shop_images\/avatar-1.png",
             "occupation": "Founder",
             "name": "James Jones",
-            "desc": "Ut donec suscipit nunc volutpat faucibus.",
-            "phone_url": "shopify://shop_images/bxs_phone.png",
-            "mail_url": "shopify://shop_images/fluent_mail-16-filled.png",
-            "twitter_url": "shopify://shop_images/akar-icons_twitter-fill.png",
-            "facebook_url": "shopify://shop_images/bi_facebook.png"
+            "desc": "Ut donec suscipit nunc volutpat faucibus."
           }
         },
-        "our_team_3Tf4ep": {
+        "our_team_7dhfhi": {
           "type": "our-team",
           "settings": {
-            "avatar": "shopify://shop_images/avatar-2.png",
+            "avatar": "shopify:\/\/shop_images\/avatar-2.png",
             "occupation": "CEO",
             "name": "clara peters",
-            "desc": "Ut donec suscipit nunc volutpat faucibus.",
-            "phone_url": "shopify://shop_images/bxs_phone.png",
-            "mail_url": "shopify://shop_images/fluent_mail-16-filled.png",
-            "twitter_url": "shopify://shop_images/akar-icons_twitter-fill.png",
-            "facebook_url": "shopify://shop_images/bi_facebook.png"
+            "desc": "Ut donec suscipit nunc volutpat faucibus."
           }
         },
-        "our_team_LLJRDU": {
+        "our_team_bLRGgr": {
           "type": "our-team",
           "settings": {
-            "avatar": "shopify://shop_images/avatar-3.png",
-            "occupation": "Designer",
-            "name": "Dick stewart",
-            "desc": "Ut donec suscipit nunc volutpat faucibus.",
-            "phone_url": "shopify://shop_images/bxs_phone.png",
-            "mail_url": "shopify://shop_images/fluent_mail-16-filled.png",
-            "twitter_url": "shopify://shop_images/akar-icons_twitter-fill.png",
-            "facebook_url": "shopify://shop_images/bi_facebook.png"
-          }
-        },
-        "our_team_k78cB8": {
-          "type": "our-team",
-          "settings": {
-            "avatar": "shopify://shop_images/avatar-4.png",
+            "avatar": "shopify:\/\/shop_images\/avatar-4.png",
             "occupation": "Developer",
             "name": "Melissa Clarkson",
-            "desc": "Ut donec suscipit nunc volutpat faucibus.",
-            "phone_url": "shopify://shop_images/bxs_phone.png",
-            "mail_url": "shopify://shop_images/fluent_mail-16-filled.png",
-            "twitter_url": "shopify://shop_images/akar-icons_twitter-fill.png",
-            "facebook_url": "shopify://shop_images/bi_facebook.png"
+            "desc": "Ut donec suscipit nunc volutpat faucibus."
+          }
+        },
+        "our_team_cfytVB": {
+          "type": "our-team",
+          "settings": {
+            "avatar": "shopify:\/\/shop_images\/avatar-3.png",
+            "occupation": "Designer",
+            "name": "Dick stewart",
+            "desc": "Ut donec suscipit nunc volutpat faucibus."
           }
         }
       },
       "block_order": [
-        "service_rWArtd",
-        "service_RhqJc7",
-        "service_fnGJ6r",
-        "our_team_LrFf3m",
-        "our_team_3Tf4ep",
-        "our_team_LLJRDU",
-        "our_team_k78cB8"
+        "our_team_6cPgKN",
+        "our_team_7dhfhi",
+        "our_team_bLRGgr",
+        "our_team_cfytVB"
       ],
       "settings": {
-        "header_image": "shopify://shop_images/company-bg.png",
-        "header_title": "About Us",
-        "service_title": "We are miralou",
-        "service_text": "Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis. Ullamcorper consequat donec euismod mi pulvinar.",
-        "service_img": "shopify://shop_images/service-box.png"
+        "title": "Our team",
+        "text": "Professionals that works with us"
       }
     },
-    "about-us": {
-      "type": "about-us",
+    "testimonial_dmfhzA": {
+      "type": "testimonial",
       "blocks": {
-        "brand_hRyaFA": {
-          "type": "brand",
-          "settings": {
-            "brand_url": "https://nike.com",
-            "brand_logo": "shopify://shop_images/Logo_1.png"
-          }
-        },
-        "brand_TpLc9V": {
-          "type": "brand",
-          "settings": {
-            "brand_url": "https://adidas.com",
-            "brand_logo": "shopify://shop_images/Logo_2.png"
-          }
-        },
-        "brand_7TgX7C": {
-          "type": "brand",
-          "settings": {
-            "brand_url": "",
-            "brand_logo": "shopify://shop_images/Logo_3.png"
-          }
-        },
-        "brand_J8xHzJ": {
-          "type": "brand",
-          "settings": {
-            "brand_url": "",
-            "brand_logo": "shopify://shop_images/logo_4.png"
-          }
-        },
-        "testimonial_GwkQNH": {
+        "testimonial_PzDiqx": {
           "type": "testimonial",
           "settings": {
-            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
-            "author": "Andrew Charlston"
-          }
-        },
-        "testimonial_bF9JxE": {
-          "type": "testimonial",
-          "settings": {
-            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
+            "description": "This is a sample testimonial description.",
             "author": "John Doe"
           }
         },
-        "testimonial_cPmeFB": {
+        "testimonial_B8hzXV": {
           "type": "testimonial",
           "settings": {
-            "description": "“Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.”",
-            "author": "Steven Gerard"
+            "description": "This is a sample testimonial description.",
+            "author": "John Doe"
+          }
+        },
+        "testimonial_7nFmnz": {
+          "type": "testimonial",
+          "settings": {
+            "description": "This is a sample testimonial description.",
+            "author": "John Doe"
+          }
+        },
+        "brand_GdB6iK": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "",
+            "brand_logo": "shopify:\/\/shop_images\/logo_4.png"
+          }
+        },
+        "brand_iz99BR": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_3.png"
+          }
+        },
+        "brand_bpL7X9": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_2.png"
+          }
+        },
+        "brand_M9np8g": {
+          "type": "brand",
+          "settings": {
+            "brand_url": "",
+            "brand_logo": "shopify:\/\/shop_images\/Logo_1.png"
           }
         }
       },
       "block_order": [
-        "brand_hRyaFA",
-        "brand_TpLc9V",
-        "brand_7TgX7C",
-        "brand_J8xHzJ",
-        "testimonial_GwkQNH",
-        "testimonial_bF9JxE",
-        "testimonial_cPmeFB"
+        "testimonial_PzDiqx",
+        "testimonial_B8hzXV",
+        "testimonial_7nFmnz",
+        "brand_GdB6iK",
+        "brand_iz99BR",
+        "brand_bpL7X9",
+        "brand_M9np8g"
       ],
       "settings": {
-        "heading": "About miralou",
-        "text": "Ut donec suscipit nunc volutpat faucibus. Ut penatibus etiam diam facilisi at nibh nulla auctor lorem. Accumsan vulputate euismod massa sit egestas. Aliquet a scelerisque enim, arcu rutrum adipiscing fringilla risus. Eget fringilla curabitur sed vulputate pretium, habitasse amet. Elementum odio sagittis, interdum elit ipsum. Volutpat erat ac eu aliquam turpis.",
-        "title": "what people say about us",
-        "description": "Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada. Eu dolor at venenatis aliquam velit et in consequat. Nam dui pulvinar consequat eleifend malesuada.",
-        "author": "Andrew Charlston"
+        "title": "Default Title",
+        "color": "#000",
+        "text": "Default Text",
+        "description": "Default Description",
+        "author": "Default Author"
       }
     }
   },
-  "order": ["about-company", "about-us"]
+  "order": [
+    "about-us-hero",
+    "about-us-service",
+    "featured_categories_tJegHG",
+    "about-us-team",
+    "testimonial_dmfhzA"
+  ]
 }

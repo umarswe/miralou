@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="{{ 'about-company.css' |  asset_url }}">
+
+<div class="company__team">
+  <h3 class="heading-3 uppercase">{{ section.settings.title }}</h3>
+  <p class="text-2 gray company__team-text">{{ section.settings.text }}</p>
+
+  <ul class="company__team-list">
+    {% for block in section.blocks %}
+      {% if block.type == 'our-team' %}
+        {% render 'our-team-card', block: block %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "About Us Team",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Default Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "our-team",
+      "name": "Our Team",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Avatar"
+        },
+        {
+          "type": "text",
+          "id": "occupation",
+          "label": "Occupation",
+          "default": "Default Text"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Default Text"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Description",
+          "default": "Default Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

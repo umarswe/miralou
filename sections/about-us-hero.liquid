@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="{{ "about-us-hero.css" |  asset_url }}">
+
+<div class="company__header">
+  <div class="company__header-bg">
+    <img
+      class="company__header-bg-image"
+      src="{{ section.settings.header_image |  image_url: width: 1000 }}"
+      width="1920"
+      height="230"
+      alt=""
+    >
+  </div>
+
+  <div class="company__header-content">
+    {% render 'breadcrumb' %}
+    <h2 class="heading-2 white uppercase">{{ section.settings.header_title }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Us Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Header Bg"
+    },
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Header Title",
+      "default": "Default Title"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,70 @@
+.about-us__testimonial {
+  max-width: 970px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.about-us__testimonial-box {
+  position: relative;
+  background-color: var(--color-secondary-white);
+  padding: 30px 100px;
+  margin: 40px 0;
+}
+
+.testimonial__text {
+  margin-bottom: 25px;
+}
+
+.chevron__left {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.chevron__right {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.chevron__left svg {
+  transform: rotate(-180deg);
+}
+
+.about-us__brands {
+  max-width: 771px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* ////////////// SLIDER ///////////// */
+
+.about-us__testimonial-box {
+  position: relative;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.testimonial-item {
+  padding: 20px;
+  text-align: center;
+}
+
+/* ////////////// SLIDER ///////////// */

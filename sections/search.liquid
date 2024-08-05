@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{{ "search.css" |  asset_url }}">
+
+<div class="search__container">
+<form class="search__input-wrapper" action="{{ routes.search_url }}" method="get">
+  <input
+    class="search__input"
+    type="text"
+    placeholder="Search"
+    name="q"
+    value="{{ search.terms | escape }}"
+  >
+  <input type="hidden" name="type" value="product,page">
+  <input type="hidden" name="options[prefix]" value="last">
+  <input class="search__input-submit" type="submit" value="Search">
+</form>
+
+{% if search.results.size > 0 %}
+  <div class="search-results">
+    {% for item in search.results %}
+      {% if item.object_type == 'product' %}
+        <div class="product-item">
+          <h3>{{ item.title }}</h3>
+        
+            <img src="{{ item.featured_image.src | image_url: width: 1000 }}" width="100" height="100" alt="{{ item.title }}">
+
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No Products Found</p>
+{% endif %}
+</div>

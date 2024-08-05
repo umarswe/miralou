@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="{{ "about-us-service.css" |  asset_url }}">
+
+<div class="company__service">
+  <div class="company__clip-path"></div>
+  <div class="company__service-box">
+    <div class="company__service-content">
+      <h3 class="heading-3 red uppercase">{{ section.settings.service_title }}</h3>
+      <p class="text-2 white company__service-text">
+        {{ section.settings.service_text }}
+      </p>
+    </div>
+    <div class="company__service-image">
+      <img src="{{ section.settings.service_img |  image_url: width: 1000  }}" width="570" height="320" alt="">
+    </div>
+  </div>
+
+  <ul class="company__service-list">
+    {% for block in section.blocks %}
+      {% if block.type == 'service' %}
+        {% assign icon_width = '' %}
+        {% assign icon_height = '' %}
+
+        {% case forloop.index %}
+          {% when 1 %}
+            {% assign icon_width = 67 %}
+            {% assign icon_height = 37 %}
+          {% when 2 %}
+            {% assign icon_width = 37 %}
+            {% assign icon_height = 37 %}
+          {% when 3 %}
+            {% assign icon_width = 43 %}
+            {% assign icon_height = 37 %}
+          {% else %}
+            {% assign icon_width = 67 %}
+            {% assign icon_height = 37 %}
+        {% endcase %}
+
+        <li class="company__service-item">
+          <img
+            src="{{ block.settings.service_icon | image_url: width: 1000 }}"
+            width="{{ icon_width }}"
+            height="{{ icon_height }}"
+            alt=""
+          >
+          <h5 class="heading-5 company__service-title">{{ block.settings.title }}</h5>
+          <p class="text-3 uppercase">{{ block.settings.text }}</p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "About Us Service",
+  "settings": [
+    {
+      "type": "text",
+      "id": "service_title",
+      "label": "Service Title",
+      "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "service_text",
+      "label": "Service Text",
+      "default": "Default Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "service_img",
+      "label": "Service Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service",
+      "name": "Service",
+      "settings": [
+        {
+          "type": "url",
+          "id": "icon_url",
+          "label": "URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "service_icon",
+          "label": "Service Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Default Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Default Text"
+        },
+        {
+          "type": "number",
+          "id": "icon_width",
+          "label": "Icon Width",
+          "default": 67
+        },
+        {
+          "type": "number",
+          "id": "icon_height",
+          "label": "Icon Height",
+          "default": 37
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

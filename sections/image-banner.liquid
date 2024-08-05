@@ -11,6 +11,16 @@
     color: {{ section.settings.color }};
     margin-bottom: {{ section.settings.margin_bottom }}px;
   }
+
+  .image-banner__cta{
+    color: {{ section.settings.color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-left: {{ section.settings.padding_left }}px;
+    padding-right: {{ section.settings.padding_right }}px;
+    background-color: {{ section.settings.background_color }};
+    border-radius: {{ section.settings.border_radius }}px;
+  }
 {% endstyle %}
 
 <div class="image-banner">
@@ -22,15 +32,13 @@
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'heading' %}
-            <h2
-              class="heading-2 image-banner__heading"
-            >
+            <h2 class="heading-2 image-banner__heading">
               {{ block.settings.heading }}
             </h2>
           {% when 'paragraph' %}
             <p class="text-2 image-banner__text">{{ block.settings.paragraph }}</p>
           {% when 'cta' %}
-            <a class="link-gray" href="{{ block.settings.cta_url }}">{{ block.settings.cta_text }}</a>
+            <a class="image-banner__cta" href="{{ block.settings.cta_url }}">{{ block.settings.cta_text }}</a>
         {% endcase %}
       {% endfor %}
     </div>
@@ -70,6 +78,62 @@
       "id": "color",
       "label": "Color",
       "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#989898"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 10,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 10,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Padding Left",
+      "default": 45,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "label": "Padding Right",
+      "default": 45,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border Radius",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
     }
   ],
   "blocks": [

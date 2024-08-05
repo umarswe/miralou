@@ -1,5 +1,14 @@
+<link rel="stylesheet" href="{{ "testimonial.css" |  asset_url }}">
+
+{% style %}
+  .testimonial__title {
+    color: {{ section.settings.color }};
+    text-transform: uppercase;
+  }
+{% endstyle %}
+
 <div class="about-us__testimonial">
-  <h2 class="heading-4 white uppercase">{{ section.settings.title }}</h2>
+  <h2 class="heading-4 testimonial__title">{{ section.settings.title }}</h2>
   <div class="about-us__testimonial-box">
     <div class="chevron__left slick-prev">
       {% render 'chevron' %}
@@ -50,15 +59,21 @@
   "settings": [
     {
       "type": "text",
-      "id": "text",
-      "label": "Description",
-      "default": "Default Text"
-    },
-    {
-      "type": "text",
       "id": "title",
       "label": "Title",
       "default": "Default Title"
+    },
+    {
+      "type": "text",
+      "id": "color",
+      "label": "Color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Default Text"
     },
     {
       "type": "text",

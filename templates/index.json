@@ -25,7 +25,7 @@
           "type": "cta",
           "settings": {
             "cta_text": "Read More",
-            "cta_url": ""
+            "cta_url": "shopify:\/\/blogs\/article"
           }
         }
       },
@@ -38,7 +38,13 @@
       "settings": {
         "background_image": "shopify:\/\/shop_images\/image-banner-bg.png",
         "margin_bottom": 40,
-        "color": "#f6f6f6"
+        "color": "#f6f6f6",
+        "background_color": "#989898",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_left": 45,
+        "padding_right": 45,
+        "border_radius": 6
       }
     },
     "featured-categories": {
@@ -138,8 +144,9 @@
         "brand_6h3VGW"
       ],
       "settings": {
-        "text": "Default Text",
         "title": "Default Title",
+        "color": "#fff",
+        "text": "Default Text",
         "description": "Default Description",
         "author": "Default Author"
       }
@@ -166,7 +173,8 @@
       "settings": {
         "heading": "our newsseller",
         "text": "Subscribe to get more useful information about us and to get you 15% discount off your next purchase",
-        "button_text": "Subscribe"
+        "button_text": "Subscribe",
+        "placeholder": "Enter your email"
       }
     }
   },
