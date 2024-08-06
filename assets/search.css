@@ -1,3 +1,8 @@
+.search__container {
+  max-width: 1170px;
+  margin: 100px auto;
+}
+
 .search__input-wrapper {
   max-width: 750px;
   margin: 0 auto;
@@ -12,6 +17,7 @@
   padding: 12px 30px;
   border-radius: 6px;
   border: 1px solid var(--color-red);
+  background-color: transparent;
 
   font-weight: 400;
   font-size: 12px;
@@ -27,4 +33,24 @@
   cursor: pointer;
 
   color: var(--color-white);
+}
+
+.search-results {
+  display: flex;
+  margin-top: 50px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-result-text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.search-card__cta {
+  padding: 10px 26px;
+  border-radius: 6px;
+  color: var(--color-white);
+  background-color: var(--color-black);
 }

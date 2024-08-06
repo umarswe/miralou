@@ -1,9 +1,32 @@
 {
   "sections": {
+    "search-hero": {
+      "type": "search-hero",
+      "blocks": {
+        "title_UzYygi": {
+          "type": "title",
+          "settings": {
+            "title": "Search"
+          }
+        }
+      },
+      "block_order": [
+        "title_UzYygi"
+      ],
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/blog-bg.png"
+      }
+    },
     "search": {
       "type": "search",
-      "settings": {}
+      "settings": {
+        "result_text": "Enter a search query to find products...",
+        "margin_top": 20
+      }
     }
   },
-  "order": ["search"]
+  "order": [
+    "search-hero",
+    "search"
+  ]
 }

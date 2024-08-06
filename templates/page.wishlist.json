@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "wishlist-hero": {
+      "type": "wishlist-hero",
+      "settings": {}
+    },
+    "wishlist": {
+      "type": "wishlist",
+      "settings": {}
+    }
+  },
+  "order": ["wishlist-hero", "wishlist"]
+}

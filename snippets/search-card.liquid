@@ -1,0 +1,18 @@
+{% style %}
+  .product-item{
+    width: 270px;
+    text-align: center;
+  }
+{% endstyle %}
+
+<li class="product-item">
+  <img
+    src="{{ item.featured_image.src | image_url: width: 1000 }}"
+    width="270"
+    height="190"
+    alt="{{ item.title }}"
+  >
+  <h6 class="heading-6 uppercase search-card__title">{{ item.title }}</h6>
+  <h6 class="heading-6 red search-cart__price">{{ item.price | money}}</h6>
+  <a class="search-card__cta" href="{{ item.url }}">View Product</a>
+</li>

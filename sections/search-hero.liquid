@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="{{ "search-hero.css" | asset_url }}">
+
+<div class="search-hero">
+  <div class="search-hero__image">
+    <img src="{{ section.settings.hero_image |  image_url: width: 1000 }}" width="" height="" alt="">
+  </div>
+
+  <div class="search-hero__content">
+    {% render 'breadcrumb' %}
+    {% for block in section.blocks %}
+      {% if block.type == 'title' %}
+        <h2 class="heading-2 white uppercase">{{ block.settings.title }}</h2>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Search Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Default Title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

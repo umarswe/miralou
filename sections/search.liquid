@@ -1,33 +1,77 @@
 <link rel="stylesheet" href="{{ "search.css" |  asset_url }}">
 
+{% style %}
+  .search-card__title {
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+
+  .search-cart__price {
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+{% endstyle %}
+
 <div class="search__container">
-<form class="search__input-wrapper" action="{{ routes.search_url }}" method="get">
-  <input
-    class="search__input"
-    type="text"
-    placeholder="Search"
-    name="q"
-    value="{{ search.terms | escape }}"
-  >
-  <input type="hidden" name="type" value="product,page">
-  <input type="hidden" name="options[prefix]" value="last">
-  <input class="search__input-submit" type="submit" value="Search">
-</form>
+  <form class="search__input-wrapper" action="{{ routes.search_url }}" method="get">
+    <input
+      class="search__input"
+      type="text"
+      placeholder="Search"
+      name="q"
+      value="{{ search.terms | escape }}"
+    >
+    <input type="hidden" name="type" value="product,page">
+    <input type="hidden" name="options[prefix]" value="last">
+    <input class="search__input-submit" type="submit" value="Search">
+  </form>
 
-{% if search.results.size > 0 %}
-  <div class="search-results">
-    {% for item in search.results %}
-      {% if item.object_type == 'product' %}
-        <div class="product-item">
-          <h3>{{ item.title }}</h3>
-        
-            <img src="{{ item.featured_image.src | image_url: width: 1000 }}" width="100" height="100" alt="{{ item.title }}">
-
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-{% else %}
-  <p>No Products Found</p>
-{% endif %}
+  {% if search.performed %}
+    {% if search.results.size > 0 %}
+      <ul class="search-results">
+        {% for item in search.results %}
+          {% if item.object_type == 'product' %}
+            {% render 'search-card', item: item %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No Products Found</p>
+    {% endif %}
+  {% else %}
+    <p class="text-3 gray search-result-text">{{ section.settings.result_text }}</p>
+  {% endif %}
 </div>
+
+
+{% schema %}
+{
+  "name": "Search",
+  "settings": [
+    {
+      "type": "text",
+      "id": "result_text",
+      "label": "Text"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "default": 10,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "default": 10,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    }
+  ]
+}
+{% endschema %}
