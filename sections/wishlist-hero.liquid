@@ -7,10 +7,26 @@
 
   <div class="wishlist-hero__content">
     {% render 'breadcrumb' %}
-    {% for block in section.blocks %}
-      {% if block.type == 'title' %}
-        <h2 class="heading-2 white uppercase">{{ block.settings.title }}</h2>
-      {% endif %}
-    {% endfor %}
+
+    <h2 class="heading-2 white uppercase">{{ section.settings.title }}</h2>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Wishlist Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Default Title"
+    }
+  ]
+}
+{% endschema %}

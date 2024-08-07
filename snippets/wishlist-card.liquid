@@ -1,0 +1,11 @@
+{% comment %} <li class="wishlist-item">
+  <a href="{{ product.url }}">
+    <img src="{{ product.featured_image | image_url: 'small' }}" width="" height="" alt="{{ product.title }}">
+    <span>{{ product.title }}</span>
+  </a>
+  <form method="post" action="/cart/add">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <button type="submit">Add to Cart</button>
+  </form>
+  <button class="remove-from-wishlist" data-product-id="{{ product.id }}">Remove</button>
+</li> {% endcomment %}

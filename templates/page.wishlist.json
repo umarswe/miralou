@@ -2,12 +2,19 @@
   "sections": {
     "wishlist-hero": {
       "type": "wishlist-hero",
-      "settings": {}
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/company-bg.png",
+        "title": "Wishlist"
+      }
     },
     "wishlist": {
       "type": "wishlist",
-      "settings": {}
+      "settings": {
+      }
     }
   },
-  "order": ["wishlist-hero", "wishlist"]
+  "order": [
+    "wishlist-hero",
+    "wishlist"
+  ]
 }
