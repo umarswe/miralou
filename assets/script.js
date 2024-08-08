@@ -28,6 +28,30 @@ async function updateCartDrawer() {
 }
 
 function addCartDrawerListeners() {
+  // change size
+  document
+    .querySelectorAll(".cart-drawer-size-selector")
+    .forEach((selector) => {
+      selector.addEventListener("change", async (e) => {
+        const key = e.target.dataset.lineItemKey;
+        const newVariantId = e.target.value;
+
+        // Get current quantity
+        const rootItem = e.target.closest(".cart-drawer-item");
+        const quantity = Number(
+          rootItem.querySelector(".cart-drawer-quantity-selector input").value
+        );
+
+        // Remove current item
+        await updateCart({ [key]: 0 });
+
+        // Add item with new variant
+        const cart = await updateCart({ [newVariantId]: quantity });
+        updateCartItemCounts(cart.item_count);
+        updateCartDrawer();
+      });
+    });
+
   // Update quantities
   document
     .querySelectorAll(".cart-drawer-quantity-selector button")

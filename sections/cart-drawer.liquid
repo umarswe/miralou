@@ -8,20 +8,33 @@
 
       <div class="cart-drawer-header-right">
         <button class="cart-drawer-header-right-close" type="button">
-          <img src="{{ section.settings.close_icon |  image_url: width: 1000 }}" width="18" height="18" alt="">
+          <img
+            src="{{ section.settings.close_icon |  image_url: width: 1000 }}"
+            width="18"
+            height="18"
+            alt="">
         </button>
       </div>
     </header>
 
-    {% form 'cart', cart, class: 'cart-drawer-form' %}
+    {% form 'cart'
+      , cart
+      , class: 'cart-drawer-form' %}
       {% if cart.item_count == 0 %}
         <h3 class="cart-drawer-empty heading-3">Your cart is empty</h3>
       {% else %}
         <div class="cart-drawer-items">
           {% for item in cart.items %}
-            <div class="cart-drawer-item" data-line-item-key="{{ item.key }}">
+            <div
+              class="cart-drawer-item"
+              data-line-item-key="{{ item.key }}"
+              data-variant-id="{{ item.variant.id }}">
               <div class="cart-drawer-item-image">
-                <img src="{{ item.image |  image_url: width: 1000 }}" width="100" height="100" alt="{{ item.title }}">
+                <img
+                  src="{{ item.image | image_url: width: 1000 }}"
+                  width="100"
+                  height="100"
+                  alt="{{ item.title }}">
               </div>
               <div class="cart-drawer-item-main">
                 <div class="cart-drawer-item-main-flex">
@@ -30,29 +43,45 @@
                       <a href="{{ item.url }}">{{ item.product.title }}</a>
                     </h6>
                     <h6 class="heading-6 red">{{ item.final_line_price | money_with_currency }}</h6>
-                    <p class="text-5 gray">Size: {{ item.variant.title }}</p>
+                    <p class="text-5 gray">Size:
+                      <select class="cart-drawer-size-selector" data-line-item-key="{{ item.key }}">
+                        {% for variant in item.product.variants %}
+                          <option
+                            value="{{ variant.id }}"
+                            {% if variant.id == item.variant.id %}
+                            selected{% endif %}>
+                            {{ variant.title }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    </p>
                   </div>
                   <div class="cart-drawer-quantity-selector">
                     <button class="cart-drawer-quantity-selector-minus" type="button">
                       <img
-                        src="{{ section.settings.decrease |  image_url: width: 1000  }}"
+                        src="{{ section.settings.decrease | image_url: width: 1000 }}"
                         width="5"
                         height="10"
-                        alt=""
-                      >
+                        alt="">
                     </button>
-                    <input type="text" readonly value="{{ item.quantity }}">
+                    <input
+                      type="text"
+                      readonly
+                      value="{{ item.quantity }}">
                     <button class="cart-drawer-quantity-selector-plus" type="button">
                       <img
-                        src="{{ section.settings.increase |  image_url: width: 1000  }}"
+                        src="{{ section.settings.increase | image_url: width: 1000 }}"
                         width="5"
                         height="10"
-                        alt=""
-                      >
+                        alt="">
                     </button>
                   </div>
                   <button class="cart-drawer-remove" type="button">
-                    <img src="{{ section.settings.close |  image_url: width: 1000 }}" width="18" height="18" alt="">
+                    <img
+                      src="{{ section.settings.close | image_url: width: 1000 }}"
+                      width="18"
+                      height="18"
+                      alt="">
                   </button>
                 </div>
               </div>
@@ -75,43 +104,46 @@
             <p class="text-4 uppercase white">cart</p>
           </a>
 
-          <button type="submit" name="checkout" class="cart-drawer-button">Checkout</button>
+          <button
+            type="submit"
+            name="checkout"
+            class="cart-drawer-button">Checkout</button>
         </footer>
       {% endif %}
     {% endform %}
   </div>
 </div>
 
+
 {% schema %}
-{
-  "name": "Cart drawer",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title",
-      "default": "Default Title"
-    },
-    {
-      "type": "image_picker",
-      "id": "close_icon",
-      "label": "Close"
-    },
-    {
-      "type": "image_picker",
-      "id": "decrease",
-      "label": "Decrease"
-    },
-    {
-      "type": "image_picker",
-      "id": "increase",
-      "label": "Increase"
-    },
-    {
-      "type": "image_picker",
-      "id": "close",
-      "label": "Close"
-    }
-  ]
-}
+  {
+    "name": "Cart drawer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Default Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "close_icon",
+        "label": "Close"
+      },
+      {
+        "type": "image_picker",
+        "id": "decrease",
+        "label": "Decrease"
+      },
+      {
+        "type": "image_picker",
+        "id": "increase",
+        "label": "Increase"
+      }, {
+        "type": "image_picker",
+        "id": "close",
+        "label": "Close"
+      }
+    ]
+  }
 {% endschema %}
