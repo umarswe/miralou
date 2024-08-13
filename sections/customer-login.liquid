@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="{{ "customer-login.css" | asset_url }}">
+
+<div class="login-container">
+  <div class="login-form-wrapper">
+    <h2 class="heading-2 login-form-title">{{ section.settings.title }}</h2>
+
+    <div class="login-form">
+      {% form 'customer_login' %}
+        {% if form.errors %}
+          <div class="login-form-error">
+            <strong>Error!</strong>
+            <p>{{ form.errors | default_errors }}</p>
+          </div>
+        {% endif %}
+        <div class="login-form-email">
+          <label for="email_address" class="login-form-email-label">{{ section.settings.email_text }}</label>
+          <input
+            type="email"
+            name="customer[email]"
+            id="email_address"
+            autocomplete="email"
+            class="login-form-email-input"
+            placeholder="Email address">
+        </div>
+
+        {% if form.password_needed %}
+          <div class="login-form-password">
+            <label for="password" class="login-form-password-label">{{ section.settings.password_text }}</label>
+            <input
+              type="password"
+              name="customer[password]"
+              id="password"
+              autocomplete="current-password"
+              class="login-form-password-input"
+              placeholder="Password">
+          </div>
+        {% endif %}
+
+        <div class="login-form-link">
+          <a href="#" class="login-form-link-text">Forgot your password?</a>
+        </div>
+        <div class="login-form-cta">
+          <button class="login-form-btn type=" submit">{{ section.settings.cta_text }}</button>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+  <div class="recover-form-wrapper">
+    <h2 class="heading-2 uppercase">Recover your password</h2>
+
+    <div class="recover-form">
+      {% form 'recover_customer_password' %}
+        {% if form.errors %}
+          <div class="recover-form-error">
+            <strong>Error!</strong>
+            <p>{{ form.errors | default_errors }}</p>
+          </div>
+        {% endif %}
+        <div class="recover-form-email">
+          <label for="email" class="login-form-email-label">{{ section.settings.email_text }}</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            class="login-form-email-input"
+            placeholder="Email address">
+        </div>
+
+        <div class="recover-form-cta">
+          <button type="submit">Recover Password</button>
+        </div>
+        <div class="recover-form-link">
+          <a href="#">Back</a>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Customer Login",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Default Title"
+      }, {
+        "type": "text",
+        "id": "email_text",
+        "label": "Email Text",
+        "default": "Email address"
+      }, {
+        "type": "text",
+        "id": "password_text",
+        "label": "Password Text",
+        "default": "Password"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default": "Sign in"
+      }
+    ]
+  }
+{% endschema %}

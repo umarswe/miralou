@@ -3,14 +3,17 @@
 <div class="main-product">
   <div class="product__container">
     <div class="product__image">
-      <img src="{{ product.featured_image | image_url: width: 1000 }}" width="270" height="230" alt="">
+      <img
+        src="{{ product.featured_image | image_url: width: 1000 }}"
+        width="270"
+        height="230"
+        alt="">
       <img
         class="product__image-right"
         src="{{ product.featured_image | image_url: width: 1000 }}"
         width="270"
         height="230"
-        alt=""
-      >
+        alt="">
     </div>
 
     <div class="product__content">
@@ -19,7 +22,10 @@
       <h5 class="heading-5 red">{{ product.price | money }}</h5>
 
       <div class="product__content-actions">
-        <form id="add-to-cart-form" action="/cart/add" method="post">
+        <form
+          id="add-to-cart-form"
+          action="/cart/add"
+          method="post">
           <ul class="product__sizes">
             {% for variant in product.variants %}
               {% if variant.available %}
@@ -31,9 +37,8 @@
                     value="{{ variant.id }}"
                     hidden
                     {% if forloop.first %}
-                      checked
-                    {% endif %}
-                  >
+                    checked
+                    {% endif %}>
                   {{ variant.option1 -}}
                 </label>
               {% endif %}
@@ -41,12 +46,15 @@
           </ul>
 
           {% if product.variants.size == 1 %}
-            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.variants.first.id }}">
           {% endif %}
 
           <div class="product__cart-cta">
-            <button type="submit" class="button__cart white">{{ section.settings.cart_title }}</button>
-            <button type="button" class="button__wishlist">{{ section.settings.wishlist_title }}</button>
+            <button type="submit" class="button__cart">{{ section.settings.cart_title }}</button>
+          {% comment %} <button type="button" class="button__wishlist">{{ section.settings.wishlist_title }}</button> {% endcomment %}
           </div>
         </form>
       </div>
@@ -59,8 +67,7 @@
             src="{{ section.settings.toggle_btn |  image_url: width: 1000 }}"
             width="10"
             height="5"
-            alt=""
-          >
+            alt="">
         </button>
 
         <div class="product__description-text">
@@ -96,32 +103,29 @@
 </script>
 
 {% schema %}
-{
-  "name": "Main Product",
-  "settings": [
-    {
-      "type": "text",
-      "id": "cart_title",
-      "label": "Cart Title",
-      "default": "Default Title"
-    },
-    {
-      "type": "text",
-      "id": "wishlist_title",
-      "label": "Wishlist Title",
-      "default": "Default Title"
-    },
-    {
-      "type": "text",
-      "id": "description",
-      "label": "Description",
-      "default": "Default Title"
-    },
-    {
-      "type": "image_picker",
-      "id": "toggle_btn",
-      "label": "Toggle Button"
-    }
-  ]
-}
+  {
+    "name": "Main Product",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cart_title",
+        "label": "Cart Title",
+        "default": "Default Title"
+      }, {
+        "type": "text",
+        "id": "wishlist_title",
+        "label": "Wishlist Title",
+        "default": "Default Title"
+      }, {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Default Title"
+      }, {
+        "type": "image_picker",
+        "id": "toggle_btn",
+        "label": "Toggle Button"
+      }
+    ]
+  }
 {% endschema %}

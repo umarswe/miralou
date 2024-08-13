@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="{{ "customer-login.css" | asset_url }}">
+
+<div class="login-container">
+  <div class="login-form-wrapper">
+    <h2 class="heading-2 login-form-title">Register an account</h2>
+
+    <div class="login-form">
+      {% form 'create_customer' %}
+        {% if form.errors %}
+          <div class="login-form-error">
+            <strong>Error!</strong>
+            <p>{{ form.errors | default_errors }}</p>
+          </div>
+        {% endif %}
+        <div class="login-form-email">
+          <label for="first_name" class="login-form-email-label">First name</label>
+          <input
+            type="text"
+            name="customer[first_name]"
+            id="first_name"
+            autocomplete="given-name"
+            class="login-form-email-input"
+            placeholder="Fist name">
+        </div>
+
+        <div class="login-form-email">
+          <label for="last_name" class="login-form-email-label">Last name</label>
+          <input
+            type="text"
+            name="customer[last_name]"
+            id="last_name"
+            autocomplete="family-name"
+            class="login-form-email-input"
+            placeholder="Last name">
+        </div>
+
+        <div class="login-form-email">
+          <label for="email_address" class="login-form-email-label">{{ section.settings.email_text }}</label>
+          <input
+            type="email"
+            name="customer[email]"
+            id="email_address"
+            autocomplete="email"
+            class="login-form-email-input"
+            placeholder="Email address">
+        </div>
+
+
+        <div class="login-form-password">
+          <label for="password" class="login-form-password-label">{{ section.settings.password_text }}</label>
+          <input
+            type="password"
+            name="customer[password]"
+            id="password"
+            autocomplete="new-password"
+            class="login-form-password-input"
+            placeholder="Password">
+        </div>
+
+        <div class="login-form-cta">
+          <button class="login-form-btn type=" submit">{{ section.settings.cta_text }}</button>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Customer Login",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Default Title"
+      }, {
+        "type": "text",
+        "id": "email_text",
+        "label": "Email Text",
+        "default": "Email address"
+      }, {
+        "type": "text",
+        "id": "password_text",
+        "label": "Password Text",
+        "default": "Password"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default": "Sign in"
+      }
+    ]
+  }
+{% endschema %}

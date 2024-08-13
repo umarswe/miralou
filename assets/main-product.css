@@ -68,7 +68,7 @@ label:has(input:checked) {
 
 .button__cart,
 .button__wishlist {
-  width: 50%;
+  width: 180px;
   padding: 10px 0;
   border-radius: 6px;
   font-weight: 600;
@@ -78,7 +78,7 @@ label:has(input:checked) {
 
 .button__cart {
   border: none;
-  background-color: var(--color-secondary-gray);
+  background-color: transparent;
 }
 
 .button__wishlist {
