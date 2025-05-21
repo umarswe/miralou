@@ -73,7 +73,7 @@ label:has(input:checked) {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .button__cart {
@@ -100,7 +100,7 @@ label:has(input:checked) {
 }
 
 .product__description-text {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 20px;
   font-size: 12px;
   line-height: 18px;
